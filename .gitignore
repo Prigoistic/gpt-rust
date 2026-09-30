@@ -1,0 +1,11 @@
+# Python
+.venv
+__pycache__/
+*.pyc
+
+# Rust
+target/
+crates/*/target/
+
+# macOS
+.DS_Store

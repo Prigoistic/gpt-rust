@@ -1,0 +1,12 @@
+[package]
+name = "tokeniser-py"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "tokeniser_rs"
+crate-type = ["cdylib"]
+
+[dependencies]
+tokeniser-core = { path = "../tokeniser-core" }
+pyo3 = { version = "0.22", features = ["extension-module"] }
