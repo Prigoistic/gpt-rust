@@ -18,8 +18,12 @@ impl Tokeniser {
         Ok(Self { inner })
     }
 
-    fn encode(&self, text: &str) -> Vec<u32> {
-        self.inner.encode(text)
+    fn encode(&self, py: Python<'_>, text: &str) -> Vec<u32> {
+        py.allow_threads(|| self.inner.encode(text))
+    }
+
+    fn encode_batch(&self, py: Python<'_>, texts: Vec<String>) -> Vec<Vec<u32>> {
+        py.allow_threads(|| self.inner.encode_batch(&texts))
     }
 
     fn decode(&self, ids: Vec<u32>) -> PyResult<String> {

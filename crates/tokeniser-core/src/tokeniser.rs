@@ -3,6 +3,7 @@ use std::ops::Range;
 use std::path::Path;
 
 use ahash::RandomState;
+use rayon::prelude::*;
 
 use crate::bpe::Merger;
 use crate::error::{LoadError, UnknownToken};
@@ -23,7 +24,20 @@ impl Tokeniser {
     }
 
     pub fn encode(&self, text: &str) -> Vec<u32> {
-        let mut merger = Merger::default();
+        self.encode_with(&mut Merger::default(), text)
+    }
+
+    /// Encodes each text independently, spreading documents across threads.
+    pub fn encode_batch<T: AsRef<str> + Sync>(&self, texts: &[T]) -> Vec<Vec<u32>> {
+        texts
+            .par_iter()
+            .map_init(Merger::default, |merger, text| {
+                self.encode_with(merger, text.as_ref())
+            })
+            .collect()
+    }
+
+    fn encode_with(&self, merger: &mut Merger, text: &str) -> Vec<u32> {
         let mut cache: HashMap<&[u8], Range<usize>, RandomState> = HashMap::default();
         let mut ids = Vec::with_capacity(text.len() / 4);
         for chunk in self.pretokenizer.chunks(text) {
@@ -98,6 +112,14 @@ mod tests {
             assert_eq!(ids.len(), expected);
             assert_eq!(tok.decode(&ids).unwrap(), text);
         }
+    }
+
+    #[test]
+    fn batch_matches_individual_encodes() {
+        let tok = tokeniser();
+        let texts = ["Hello, world!", "", "don't stop", "日本語 😀", "a  b\n\nc"];
+        let expected: Vec<Vec<u32>> = texts.iter().map(|t| tok.encode(t)).collect();
+        assert_eq!(tok.encode_batch(&texts), expected);
     }
 
     #[test]

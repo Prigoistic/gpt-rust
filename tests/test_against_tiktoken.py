@@ -42,6 +42,12 @@ def check_against_tiktoken(name: str, tokeniser, enc, strings: list[str]) -> boo
     return all_match
 
 
+def check_batch_against_tiktoken(rs_tok, enc, strings: list[str]) -> bool:
+    match = rs_tok.encode_batch(strings) == enc.encode_batch(strings)
+    print(f"\nRust encode_batch vs tiktoken: {'ALL MATCH' if match else 'MISMATCH FOUND'}")
+    return match
+
+
 def benchmark(name: str, fn, n: int = 20) -> None:
     start = time.perf_counter()
     for _ in range(n):
@@ -58,6 +64,8 @@ if __name__ == "__main__":
     ok_py = check_against_tiktoken("Python", py_tok, enc, TEST_STRINGS)
     ok_rs = check_against_tiktoken("Rust (PyO3, debug build)", rs_tok, enc, TEST_STRINGS)
 
+    ok_batch = check_batch_against_tiktoken(rs_tok, enc, TEST_STRINGS)
+
     sample_text = ("the quick brown fox jumps over the lazy dog. " * 200).strip()
     print(f"\n=== speed on {len(sample_text)}-char repetitive text ===")
     print("NOTE: Rust binding is a DEBUG build (release build hits an unresolved")
@@ -66,4 +74,4 @@ if __name__ == "__main__":
     benchmark("rust (debug, cache + rayon)", lambda: rs_tok.encode(sample_text))
     benchmark("tiktoken (release, Rust core)", lambda: enc.encode(sample_text))
 
-    print("\n" + ("ALL MATCH" if ok_py and ok_rs else "MISMATCH FOUND ABOVE"))
+    print("\n" + ("ALL MATCH" if ok_py and ok_rs and ok_batch else "MISMATCH FOUND ABOVE"))
