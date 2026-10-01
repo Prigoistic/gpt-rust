@@ -26,12 +26,19 @@ fn bytes_to_unicode() -> Vec<(u8, char)> {
     byte_values
         .into_iter()
         .map(|b| b as u8)
-        .zip(unicode_points.into_iter().map(|c| char::from_u32(c).unwrap()))
+        .zip(
+            unicode_points
+                .into_iter()
+                .map(|c| char::from_u32(c).unwrap()),
+        )
         .collect()
 }
 
 fn build_byte_decoder() -> HashMap<char, u8> {
-    bytes_to_unicode().into_iter().map(|(b, c)| (c, b)).collect()
+    bytes_to_unicode()
+        .into_iter()
+        .map(|(b, c)| (c, b))
+        .collect()
 }
 
 pub struct Tokeniser {
@@ -56,7 +63,11 @@ impl Tokeniser {
         for (symbol, id) in raw {
             let bytes: Vec<u8> = symbol
                 .chars()
-                .map(|c| *byte_decoder.get(&c).expect("symbol char not in byte decoder"))
+                .map(|c| {
+                    *byte_decoder
+                        .get(&c)
+                        .expect("symbol char not in byte decoder")
+                })
                 .collect();
             decoder[id as usize] = bytes.clone();
             encoder.insert(bytes, id);
