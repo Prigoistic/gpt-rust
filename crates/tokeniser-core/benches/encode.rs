@@ -9,7 +9,7 @@ fn repo_root() -> PathBuf {
 
 fn encode(c: &mut Criterion) {
     let root = repo_root();
-    let tokeniser = Tokeniser::from_gpt2_files(&root.join("data"));
+    let tokeniser = Tokeniser::from_gpt2_files(&root.join("data")).expect("load vocab");
     let mut group = c.benchmark_group("encode");
     group.sample_size(10);
 
