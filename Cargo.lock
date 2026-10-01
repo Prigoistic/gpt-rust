@@ -682,6 +682,7 @@ dependencies = [
  "dashmap",
  "fancy-regex",
  "rayon",
+ "regex-syntax",
  "serde_json",
 ]
 

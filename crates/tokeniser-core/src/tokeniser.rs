@@ -1,17 +1,15 @@
 use std::path::Path;
 
 use dashmap::DashMap;
-use fancy_regex::Regex;
 use rayon::prelude::*;
 
 use crate::error::{LoadError, UnknownToken};
+use crate::pretokenize::Pretokenizer;
 use crate::vocab::Vocab;
-
-const PATTERN: &str = r"'s|'t|'re|'ve|'m|'ll|'d| ?\p{L}+| ?\p{N}+| ?[^\s\p{L}\p{N}]+|\s+(?!\S)|\s+";
 
 pub struct Tokeniser {
     vocab: Vocab,
-    pattern: Regex,
+    pretokenizer: Pretokenizer,
     cache: DashMap<Vec<u8>, Vec<u32>>,
 }
 
@@ -19,17 +17,13 @@ impl Tokeniser {
     pub fn from_gpt2_files(data_dir: &Path) -> Result<Self, LoadError> {
         Ok(Self {
             vocab: Vocab::from_gpt2_files(data_dir)?,
-            pattern: Regex::new(PATTERN).expect("pattern compiles"),
+            pretokenizer: Pretokenizer::new(),
             cache: DashMap::new(),
         })
     }
 
     pub fn encode(&self, text: &str) -> Vec<u32> {
-        let chunks: Vec<&str> = self
-            .pattern
-            .find_iter(text)
-            .map(|m| m.expect("regex match").as_str())
-            .collect();
+        let chunks: Vec<&str> = self.pretokenizer.chunks(text).collect();
         chunks
             .par_iter()
             .flat_map_iter(|chunk| self.encode_chunk(chunk.as_bytes()))
