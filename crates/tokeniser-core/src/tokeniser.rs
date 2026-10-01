@@ -91,6 +91,16 @@ mod tests {
     }
 
     #[test]
+    fn long_chunks_match_tiktoken_token_counts() {
+        let tok = tokeniser();
+        for (text, expected) in [("a".repeat(10_000), 2500), ("=".repeat(100_000), 1563)] {
+            let ids = tok.encode(&text);
+            assert_eq!(ids.len(), expected);
+            assert_eq!(tok.decode(&ids).unwrap(), text);
+        }
+    }
+
+    #[test]
     fn decode_rejects_unknown_ids() {
         assert!(tokeniser().decode(&[u32::MAX]).is_err());
     }

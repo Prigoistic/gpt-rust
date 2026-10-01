@@ -1,19 +1,19 @@
 use crate::vocab::Vocab;
 
-const NO_MERGE: u32 = u32::MAX;
+pub const NO_MERGE: u32 = u32::MAX;
 
-/// Reusable scratch space for merging one multi-token chunk into token ids.
+/// Merges short chunks by rescanning a small rank array; fastest below ~100 bytes.
 ///
 /// Symbols are byte ranges of the chunk, stored as boundary indices. A GPT-2 id
 /// doubles as the merge rank, so the rank of merging two neighbours is the id of
 /// their concatenated bytes (if that is a vocab entry).
 #[derive(Default)]
-pub struct Merger {
+pub struct ScanMerger {
     boundaries: Vec<usize>,
     ranks: Vec<u32>,
 }
 
-impl Merger {
+impl ScanMerger {
     pub fn merge(&mut self, vocab: &Vocab, chunk: &[u8], out: &mut Vec<u32>) {
         self.boundaries.clear();
         self.boundaries.extend(0..=chunk.len());

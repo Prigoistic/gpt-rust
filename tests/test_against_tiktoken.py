@@ -21,6 +21,8 @@ TEST_STRINGS = [
     "",
     "a",
     "\n\nmultiple\n\nnewlines\n\n",
+    "a" * 2000,
+    "=" * 500 + " tail",
 ]
 
 
