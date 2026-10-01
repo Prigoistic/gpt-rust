@@ -2,6 +2,8 @@ use std::collections::HashMap;
 use std::ops::Range;
 use std::path::Path;
 
+use ahash::RandomState;
+
 use crate::bpe::Merger;
 use crate::error::{LoadError, UnknownToken};
 use crate::pretokenize::Pretokenizer;
@@ -22,7 +24,7 @@ impl Tokeniser {
 
     pub fn encode(&self, text: &str) -> Vec<u32> {
         let mut merger = Merger::default();
-        let mut cache: HashMap<&[u8], Range<usize>> = HashMap::new();
+        let mut cache: HashMap<&[u8], Range<usize>, RandomState> = HashMap::default();
         let mut ids = Vec::with_capacity(text.len() / 4);
         for chunk in self.pretokenizer.chunks(text) {
             let bytes = chunk.as_bytes();

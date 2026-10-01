@@ -1,11 +1,13 @@
 use std::collections::HashMap;
 use std::path::Path;
 
+use ahash::RandomState;
+
 use crate::byte_map::byte_decoder;
 use crate::error::{LoadError, UnknownToken};
 
 pub struct Vocab {
-    encoder: HashMap<Vec<u8>, u32>,
+    encoder: HashMap<Vec<u8>, u32, RandomState>,
     decoder: Vec<Vec<u8>>,
 }
 
@@ -15,7 +17,7 @@ impl Vocab {
         let symbols: HashMap<String, u32> = serde_json::from_str(&json)?;
         let to_byte = byte_decoder();
 
-        let mut encoder = HashMap::with_capacity(symbols.len());
+        let mut encoder = HashMap::with_capacity_and_hasher(symbols.len(), RandomState::new());
         let mut decoder = vec![Vec::new(); symbols.len()];
         for (symbol, id) in symbols {
             let bytes = symbol
