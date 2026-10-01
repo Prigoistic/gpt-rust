@@ -9,3 +9,6 @@ crates/*/target/
 
 # macOS
 .DS_Store
+
+# Benchmark corpora
+bench-data/

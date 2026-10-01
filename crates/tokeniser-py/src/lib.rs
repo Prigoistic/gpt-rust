@@ -1,10 +1,9 @@
-use std::path::PathBuf;
+use std::path::Path;
 
+use pyo3::exceptions::{PyIOError, PyValueError};
 use pyo3::prelude::*;
 use tokeniser_core::Tokeniser as CoreTokeniser;
 
-/// Python-facing wrapper around `tokeniser_core::Tokeniser`. Holds no logic of its own;
-/// it exists so the Rust tokeniser can be tested and benchmarked against tiktoken.
 #[pyclass]
 struct Tokeniser {
     inner: CoreTokeniser,
@@ -13,18 +12,24 @@ struct Tokeniser {
 #[pymethods]
 impl Tokeniser {
     #[staticmethod]
-    fn from_gpt2_files(data_dir: String) -> Self {
-        Tokeniser {
-            inner: CoreTokeniser::from_gpt2_files(&PathBuf::from(data_dir)),
-        }
+    fn from_gpt2_files(data_dir: &str) -> PyResult<Self> {
+        let inner = CoreTokeniser::from_gpt2_files(Path::new(data_dir))
+            .map_err(|e| PyIOError::new_err(e.to_string()))?;
+        Ok(Self { inner })
     }
 
-    fn encode(&self, text: &str) -> Vec<u32> {
-        self.inner.encode(text)
+    fn encode(&self, py: Python<'_>, text: &str) -> Vec<u32> {
+        py.allow_threads(|| self.inner.encode(text))
     }
 
-    fn decode(&self, ids: Vec<u32>) -> String {
-        self.inner.decode(&ids)
+    fn encode_batch(&self, py: Python<'_>, texts: Vec<String>) -> Vec<Vec<u32>> {
+        py.allow_threads(|| self.inner.encode_batch(&texts))
+    }
+
+    fn decode(&self, ids: Vec<u32>) -> PyResult<String> {
+        self.inner
+            .decode(&ids)
+            .map_err(|e| PyValueError::new_err(e.to_string()))
     }
 }
 
