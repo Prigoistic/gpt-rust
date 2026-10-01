@@ -74,4 +74,6 @@ if __name__ == "__main__":
     benchmark("rust (debug, cache + rayon)", lambda: rs_tok.encode(sample_text))
     benchmark("tiktoken (release, Rust core)", lambda: enc.encode(sample_text))
 
-    print("\n" + ("ALL MATCH" if ok_py and ok_rs and ok_batch else "MISMATCH FOUND ABOVE"))
+    all_ok = ok_py and ok_rs and ok_batch
+    print("\n" + ("ALL MATCH" if all_ok else "MISMATCH FOUND ABOVE"))
+    sys.exit(0 if all_ok else 1)
