@@ -3,6 +3,8 @@ use std::path::PathBuf;
 use pyo3::prelude::*;
 use tokeniser_core::Tokeniser as CoreTokeniser;
 
+/// Python-facing wrapper around `tokeniser_core::Tokeniser`. Holds no logic of its own;
+/// it exists so the Rust tokeniser can be tested and benchmarked against tiktoken.
 #[pyclass]
 struct Tokeniser {
     inner: CoreTokeniser,
