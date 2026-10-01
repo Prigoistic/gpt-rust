@@ -10,3 +10,8 @@ dashmap = "6"
 serde_json = "1"
 
 [dev-dependencies]
+criterion = "0.5"
+
+[[bench]]
+name = "encode"
+harness = false
