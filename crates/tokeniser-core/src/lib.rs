@@ -1,3 +1,4 @@
+mod bpe;
 mod byte_map;
 mod char_class;
 mod error;

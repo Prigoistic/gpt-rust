@@ -1,8 +1,8 @@
+use std::collections::HashMap;
+use std::ops::Range;
 use std::path::Path;
 
-use dashmap::DashMap;
-use rayon::prelude::*;
-
+use crate::bpe::Merger;
 use crate::error::{LoadError, UnknownToken};
 use crate::pretokenize::Pretokenizer;
 use crate::vocab::Vocab;
@@ -10,7 +10,6 @@ use crate::vocab::Vocab;
 pub struct Tokeniser {
     vocab: Vocab,
     pretokenizer: Pretokenizer,
-    cache: DashMap<Vec<u8>, Vec<u32>>,
 }
 
 impl Tokeniser {
@@ -18,16 +17,26 @@ impl Tokeniser {
         Ok(Self {
             vocab: Vocab::from_gpt2_files(data_dir)?,
             pretokenizer: Pretokenizer::new(),
-            cache: DashMap::new(),
         })
     }
 
     pub fn encode(&self, text: &str) -> Vec<u32> {
-        let chunks: Vec<&str> = self.pretokenizer.chunks(text).collect();
-        chunks
-            .par_iter()
-            .flat_map_iter(|chunk| self.encode_chunk(chunk.as_bytes()))
-            .collect()
+        let mut merger = Merger::default();
+        let mut cache: HashMap<&[u8], Range<usize>> = HashMap::new();
+        let mut ids = Vec::with_capacity(text.len() / 4);
+        for chunk in self.pretokenizer.chunks(text) {
+            let bytes = chunk.as_bytes();
+            if let Some(id) = self.vocab.id(bytes) {
+                ids.push(id);
+            } else if let Some(range) = cache.get(bytes) {
+                ids.extend_from_within(range.clone());
+            } else {
+                let start = ids.len();
+                merger.merge(&self.vocab, bytes, &mut ids);
+                cache.insert(bytes, start..ids.len());
+            }
+        }
+        ids
     }
 
     pub fn decode(&self, ids: &[u32]) -> Result<String, UnknownToken> {
@@ -36,35 +45,6 @@ impl Tokeniser {
             bytes.extend_from_slice(self.vocab.bytes(id)?);
         }
         Ok(String::from_utf8_lossy(&bytes).into_owned())
-    }
-
-    fn encode_chunk(&self, chunk: &[u8]) -> Vec<u32> {
-        if let Some(cached) = self.cache.get(chunk) {
-            return cached.clone();
-        }
-
-        let mut boundaries: Vec<usize> = (0..=chunk.len()).collect();
-        while boundaries.len() > 2 {
-            let best = (0..boundaries.len() - 2)
-                .filter_map(|i| {
-                    let pair = &chunk[boundaries[i]..boundaries[i + 2]];
-                    self.vocab.id(pair).map(|rank| (rank, i))
-                })
-                .min();
-            match best {
-                Some((_, i)) => {
-                    boundaries.remove(i + 1);
-                }
-                None => break,
-            }
-        }
-
-        let ids: Vec<u32> = boundaries
-            .windows(2)
-            .map(|w| self.vocab.id(&chunk[w[0]..w[1]]).expect("symbol in vocab"))
-            .collect();
-        self.cache.insert(chunk.to_vec(), ids.clone());
-        ids
     }
 }
 
