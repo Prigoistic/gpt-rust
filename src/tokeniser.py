@@ -8,6 +8,8 @@ import regex as re
 
 DATA_DIR = Path(__file__).resolve().parent.parent / "data"
 
+# GPT-2's fixed pre-split. Merges never cross a match boundary, so this must match the
+# original exactly. Needs the third-party `regex` module for \p{L}/\p{N}.
 PRETOKENIZE_PATTERN = re.compile(
     r"""'s|'t|'re|'ve|'m|'ll|'d| ?\p{L}+| ?\p{N}+| ?[^\s\p{L}\p{N}]+|\s+(?!\S)|\s+"""
 )
@@ -15,6 +17,8 @@ PRETOKENIZE_PATTERN = re.compile(
 
 @lru_cache()
 def bytes_to_unicode() -> dict[int, str]:
+    """GPT-2's byte -> printable-char table, so every byte has a visible stand-in."""
+    # Printable bytes map to themselves.
     printable = (
         list(range(ord("!"), ord("~") + 1))
         + list(range(ord("¡"), ord("¬") + 1))
@@ -22,6 +26,8 @@ def bytes_to_unicode() -> dict[int, str]:
     )
     byte_values = printable[:]
     unicode_points = printable[:]
+
+    # Control/whitespace bytes are shifted to unused code points from U+0100 up.
 
     n = 0
     for b in range(2**8):
@@ -39,17 +45,24 @@ class Tokeniser:
         self.decoder = {v: k for k, v in encoder.items()}
         self.byte_encoder = bytes_to_unicode()
         self.byte_decoder = {v: k for k, v in self.byte_encoder.items()}
+        # Earlier merges (lower rank) have priority when several pairs could merge.
         self.bpe_ranks = {pair: i for i, pair in enumerate(bpe_merges)}
+        # Real text repeats words constantly, so memoizing per chunk skips most merge loops.
         self.cache: dict[str, tuple[str, ...]] = {}
 
     @classmethod
     def from_gpt2_files(cls, data_dir: Path = DATA_DIR) -> "Tokeniser":
         encoder = json.loads((data_dir / "encoder.json").read_text())
+        # vocab.bpe starts with a version header and ends with a blank line; neither is a merge.
         lines = (data_dir / "vocab.bpe").read_text(encoding="utf-8").split("\n")[1:-1]
         merges = [tuple(line.split()) for line in lines]
         return cls(encoder, merges)
 
     def _merge_symbols(self, byte_str: str) -> tuple[str, ...]:
+        """BPE one chunk: repeatedly merge the lowest-rank adjacent pair until none apply.
+
+        Rescanning all pairs each round is fine here: chunks are single words, not whole texts.
+        """
         cached = self.cache.get(byte_str)
         if cached is not None:
             return cached
@@ -86,4 +99,5 @@ class Tokeniser:
     def decode(self, ids: list[int]) -> str:
         text = "".join(self.decoder[i] for i in ids)
         raw = bytearray(self.byte_decoder[c] for c in text)
+        # A token boundary can split a multi-byte character, so tolerate invalid UTF-8.
         return raw.decode("utf-8", errors="replace")
