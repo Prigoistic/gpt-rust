@@ -14,3 +14,15 @@ cache/state layout, a serving engine and superiority over competent cached BLT
 remain unestablished. Incremental entropy and main-model state are the next
 correctness/measurement gate. The north star remains competitive useful quality,
 real throughput and cost per useful output for raw-byte modeling.
+
+
+## Multi-byte pilot, 22 November 2026
+
+Track B now has a measured uncached BLT-1B implementation of greedy local
+drafting and full-model block verification. Width 4 completed three fresh
+64-symbol requests 2.24–2.42× faster than the unmodified M1 generator on one
+T4, with identical output IDs. The best width varied by prompt. Initial bytes
+and readable UTF-8 text have separate timing measurements. See the
+[B1 report](experiments/b1-fixed-width/REPORT.md) and
+[reproduction protocol](experiments/b1-fixed-width/PROTOCOL.md).
+The cached comparison remains open.

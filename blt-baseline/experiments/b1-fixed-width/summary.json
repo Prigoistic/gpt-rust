@@ -1,0 +1,279 @@
+{
+  "primary": {
+    "prose": {
+      "1": {
+        "bytes_s": 22.929325463293257,
+        "speedup": 1.0,
+        "first_ms": 43.891008011996746,
+        "full_calls": 40,
+        "local_decoder_calls": 40,
+        "accepted": 0,
+        "proposed": 0,
+        "verifications": 0,
+        "verify_ms": 0,
+        "peak_mib": 9076.76953125
+      },
+      "2": {
+        "bytes_s": 33.644582474747274,
+        "speedup": 1.4677092282216542,
+        "first_ms": 43.66388823837042,
+        "full_calls": 17,
+        "local_decoder_calls": 48,
+        "accepted": 24,
+        "proposed": 31,
+        "verifications": 16,
+        "verify_ms": 698.0669815093279,
+        "peak_mib": 9076.939453125
+      },
+      "4": {
+        "bytes_s": 36.0398829998371,
+        "speedup": 1.5720403457282672,
+        "first_ms": 44.04689371585846,
+        "full_calls": 12,
+        "local_decoder_calls": 53,
+        "accepted": 29,
+        "proposed": 41,
+        "verifications": 11,
+        "verify_ms": 479.6513356268406,
+        "peak_mib": 9076.9375
+      },
+      "8": {
+        "bytes_s": 33.069158071503566,
+        "speedup": 1.4451475410432477,
+        "first_ms": 43.999274261295795,
+        "full_calls": 9,
+        "local_decoder_calls": 66,
+        "accepted": 32,
+        "proposed": 57,
+        "verifications": 8,
+        "verify_ms": 350.69154668599367,
+        "peak_mib": 9076.939453125
+      },
+      "16": {
+        "bytes_s": 21.98682587380083,
+        "speedup": 0.9588954506751085,
+        "first_ms": 43.942189775407314,
+        "full_calls": 9,
+        "local_decoder_calls": 109,
+        "accepted": 32,
+        "proposed": 100,
+        "verifications": 8,
+        "verify_ms": 350.5255617201328,
+        "peak_mib": 9076.943359375
+      },
+      "32": {
+        "bytes_s": 13.956906289660836,
+        "speedup": 0.608731531893205,
+        "first_ms": 44.09313295036554,
+        "full_calls": 9,
+        "local_decoder_calls": 183,
+        "accepted": 32,
+        "proposed": 174,
+        "verifications": 8,
+        "verify_ms": 349.90366268903017,
+        "peak_mib": 9076.955078125
+      }
+    },
+    "code": {
+      "1": {
+        "bytes_s": 22.88878978675046,
+        "speedup": 1.0,
+        "first_ms": 44.132561422884464,
+        "full_calls": 40,
+        "local_decoder_calls": 40,
+        "accepted": 0,
+        "proposed": 0,
+        "verifications": 0,
+        "verify_ms": 0,
+        "peak_mib": 9076.76953125
+      },
+      "2": {
+        "bytes_s": 40.408719766093846,
+        "speedup": 1.768428896137452,
+        "first_ms": 44.118914753198624,
+        "full_calls": 14,
+        "local_decoder_calls": 40,
+        "accepted": 26,
+        "proposed": 26,
+        "verifications": 13,
+        "verify_ms": 568.3077713474631,
+        "peak_mib": 9076.8623046875
+      },
+      "4": {
+        "bytes_s": 46.82743077450923,
+        "speedup": 2.0473288669505885,
+        "first_ms": 43.98802109062672,
+        "full_calls": 9,
+        "local_decoder_calls": 41,
+        "accepted": 32,
+        "proposed": 32,
+        "verifications": 8,
+        "verify_ms": 350.57372879236937,
+        "peak_mib": 9076.9072265625
+      },
+      "8": {
+        "bytes_s": 52.50199798822058,
+        "speedup": 2.293786542555089,
+        "first_ms": 43.97075902670622,
+        "full_calls": 6,
+        "local_decoder_calls": 41,
+        "accepted": 35,
+        "proposed": 35,
+        "verifications": 5,
+        "verify_ms": 218.83654966950417,
+        "peak_mib": 9076.908203125
+      },
+      "16": {
+        "bytes_s": 56.95559540352884,
+        "speedup": 2.4850650123530325,
+        "first_ms": 43.83018519729376,
+        "full_calls": 4,
+        "local_decoder_calls": 41,
+        "accepted": 37,
+        "proposed": 37,
+        "verifications": 3,
+        "verify_ms": 131.21617399156094,
+        "peak_mib": 9076.90625
+      },
+      "32": {
+        "bytes_s": 59.44375671392588,
+        "speedup": 2.597068576702812,
+        "first_ms": 43.86533424258232,
+        "full_calls": 3,
+        "local_decoder_calls": 41,
+        "accepted": 38,
+        "proposed": 38,
+        "verifications": 2,
+        "verify_ms": 87.2370321303606,
+        "peak_mib": 9076.9052734375
+      }
+    },
+    "hindi": {
+      "1": {
+        "bytes_s": 22.84953125210259,
+        "speedup": 1.0,
+        "first_ms": 43.90823654830456,
+        "full_calls": 40,
+        "local_decoder_calls": 40,
+        "accepted": 0,
+        "proposed": 0,
+        "verifications": 0,
+        "verify_ms": 0,
+        "peak_mib": 9077.09765625
+      },
+      "2": {
+        "bytes_s": 35.814381534430574,
+        "speedup": 1.5670181417263271,
+        "first_ms": 43.88291761279106,
+        "full_calls": 16,
+        "local_decoder_calls": 45,
+        "accepted": 25,
+        "proposed": 29,
+        "verifications": 15,
+        "verify_ms": 655.1740365102887,
+        "peak_mib": 9077.296875
+      },
+      "4": {
+        "bytes_s": 39.085909698186065,
+        "speedup": 1.7085718723544912,
+        "first_ms": 44.15850155055523,
+        "full_calls": 11,
+        "local_decoder_calls": 49,
+        "accepted": 30,
+        "proposed": 38,
+        "verifications": 10,
+        "verify_ms": 437.0428519323468,
+        "peak_mib": 9077.2958984375
+      },
+      "8": {
+        "bytes_s": 35.354958938005865,
+        "speedup": 1.5462513474747186,
+        "first_ms": 43.9870897680521,
+        "full_calls": 8,
+        "local_decoder_calls": 63,
+        "accepted": 32,
+        "proposed": 55,
+        "verifications": 7,
+        "verify_ms": 306.2777230516076,
+        "peak_mib": 9077.2939453125
+      },
+      "16": {
+        "bytes_s": 26.754247763304964,
+        "speedup": 1.168684547035691,
+        "first_ms": 44.159031473100185,
+        "full_calls": 7,
+        "local_decoder_calls": 91,
+        "accepted": 33,
+        "proposed": 84,
+        "verifications": 6,
+        "verify_ms": 262.06274423748255,
+        "peak_mib": 9077.302734375
+      },
+      "32": {
+        "bytes_s": 19.00383429634179,
+        "speedup": 0.8316173895481384,
+        "first_ms": 44.017099775373936,
+        "full_calls": 7,
+        "local_decoder_calls": 134,
+        "accepted": 33,
+        "proposed": 127,
+        "verifications": 6,
+        "verify_ms": 262.6982545480132,
+        "peak_mib": 9077.302734375
+      }
+    }
+  },
+  "holdout": {
+    "prose": {
+      "0": {
+        "median_seconds": 4.5893543511629105,
+        "speedup": 1.0,
+        "raw_bytes": 64
+      },
+      "4": {
+        "median_seconds": 1.884634735994041,
+        "speedup": 2.416569870790136,
+        "raw_bytes": 64
+      },
+      "8": {
+        "median_seconds": 1.82634034473449,
+        "speedup": 2.5128691727116736,
+        "raw_bytes": 64
+      }
+    },
+    "code": {
+      "0": {
+        "median_seconds": 3.2086803102865815,
+        "speedup": 1.0,
+        "raw_bytes": 64
+      },
+      "4": {
+        "median_seconds": 1.4311741460114717,
+        "speedup": 2.2419915278855673,
+        "raw_bytes": 64
+      },
+      "8": {
+        "median_seconds": 1.203975428827107,
+        "speedup": 2.6653176856839633,
+        "raw_bytes": 64
+      }
+    },
+    "hindi": {
+      "0": {
+        "median_seconds": 4.619010461494327,
+        "speedup": 1.0,
+        "raw_bytes": 64
+      },
+      "4": {
+        "median_seconds": 2.0028980569913983,
+        "speedup": 2.290387021808526,
+        "raw_bytes": 64
+      },
+      "8": {
+        "median_seconds": 2.028024198487401,
+        "speedup": 2.27923759217072,
+        "raw_bytes": 64
+      }
+    }
+  }
+}

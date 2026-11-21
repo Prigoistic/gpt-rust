@@ -1,0 +1,23 @@
+--- fixed_width.py
++++ stream_probe.py
+@@ -17 +17 @@
+-WIDTHS = (1, 2, 4, 8, 16, 32)
++WIDTHS = (1, 4, 8)
+@@ -76,0 +77,4 @@
++    raw = bytearray()
++    visible = None
++    four = None
++    sixteen = None
+@@ -77,0 +82,9 @@
++        nonlocal visible, four, sixteen
++        raw.extend(t-4 for t in symbols if t >= 4)
++        now = time.perf_counter() - start
++        if visible is None and raw.decode("utf8", errors="ignore").strip():
++            visible = now
++        if four is None and len(raw) >= 4:
++            four = now
++        if sixteen is None and len(raw) >= 16:
++            sixteen = now
+@@ -118 +131 @@
+-                raw_bytes=sum(x >= 4 for x in output), rounds=rounds,
++                first_visible_s=visible, four_s=four, sixteen_s=sixteen, raw_bytes=sum(x >= 4 for x in output), rounds=rounds,

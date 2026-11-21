@@ -1,0 +1,11 @@
+--- stream_probe.py
++++ visible_first.py
+@@ -17 +17 @@
+-WIDTHS = (1, 4, 8)
++WIDTHS = (1, 4)
+@@ -102,2 +102,3 @@
+-        if width == 1:
+-            logits, _, _ = target(pos, False)
++        if width == 1 or visible is None:
++            anchor = pos
++            logits, lengths, frozen = target(pos, width > 1)
