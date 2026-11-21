@@ -1,0 +1,330 @@
+{
+  "status": "PASS",
+  "torch": "2.10.0+cu128",
+  "entropy_weight_sha256": "aa45c5ffae9f528329d146a91356d1d06056b71653beddada39781bfcadb521d",
+  "entropy_atol": 0.0001,
+  "entropy_rtol": 0.0001,
+  "cases": [
+    {
+      "length": 3,
+      "batch": 1,
+      "policy": "length_aware_rows",
+      "entropy_max_abs_error_nats": 2.384185791015625e-06,
+      "patches_equal": true,
+      "min_threshold_distance_nats": 0.21966123580932617
+    },
+    {
+      "length": 3,
+      "batch": 1,
+      "policy": "length_aware_batch",
+      "entropy_max_abs_error_nats": 2.384185791015625e-06,
+      "patches_equal": true,
+      "min_threshold_distance_nats": 0.21966123580932617
+    },
+    {
+      "length": 3,
+      "batch": 4,
+      "policy": "length_aware_rows",
+      "entropy_max_abs_error_nats": 3.814697265625e-06,
+      "patches_equal": true,
+      "min_threshold_distance_nats": 0.06629323959350586
+    },
+    {
+      "length": 3,
+      "batch": 4,
+      "policy": "length_aware_batch",
+      "entropy_max_abs_error_nats": 3.814697265625e-06,
+      "patches_equal": true,
+      "min_threshold_distance_nats": 0.06629323959350586
+    },
+    {
+      "length": 31,
+      "batch": 1,
+      "policy": "length_aware_rows",
+      "entropy_max_abs_error_nats": 3.337860107421875e-06,
+      "patches_equal": true,
+      "min_threshold_distance_nats": 0.18106389045715332
+    },
+    {
+      "length": 31,
+      "batch": 1,
+      "policy": "length_aware_batch",
+      "entropy_max_abs_error_nats": 3.337860107421875e-06,
+      "patches_equal": true,
+      "min_threshold_distance_nats": 0.18106389045715332
+    },
+    {
+      "length": 31,
+      "batch": 4,
+      "policy": "length_aware_rows",
+      "entropy_max_abs_error_nats": 1.0967254638671875e-05,
+      "patches_equal": true,
+      "min_threshold_distance_nats": 0.40097731351852417
+    },
+    {
+      "length": 31,
+      "batch": 4,
+      "policy": "length_aware_batch",
+      "entropy_max_abs_error_nats": 1.1920928955078125e-05,
+      "patches_equal": true,
+      "min_threshold_distance_nats": 0.40097731351852417
+    },
+    {
+      "length": 129,
+      "batch": 1,
+      "policy": "length_aware_rows",
+      "entropy_max_abs_error_nats": 2.002716064453125e-05,
+      "patches_equal": true,
+      "min_threshold_distance_nats": 0.810793399810791
+    },
+    {
+      "length": 129,
+      "batch": 1,
+      "policy": "length_aware_batch",
+      "entropy_max_abs_error_nats": 2.002716064453125e-05,
+      "patches_equal": true,
+      "min_threshold_distance_nats": 0.810793399810791
+    },
+    {
+      "length": 129,
+      "batch": 4,
+      "policy": "length_aware_rows",
+      "entropy_max_abs_error_nats": 5.1975250244140625e-05,
+      "patches_equal": true,
+      "min_threshold_distance_nats": 0.04612863063812256
+    },
+    {
+      "length": 129,
+      "batch": 4,
+      "policy": "length_aware_batch",
+      "entropy_max_abs_error_nats": 5.91278076171875e-05,
+      "patches_equal": true,
+      "min_threshold_distance_nats": 0.04612863063812256
+    },
+    {
+      "length": 513,
+      "batch": 1,
+      "policy": "length_aware_rows",
+      "entropy_max_abs_error_nats": 2.288818359375e-05,
+      "patches_equal": true,
+      "min_threshold_distance_nats": 0.13077616691589355
+    },
+    {
+      "length": 513,
+      "batch": 1,
+      "policy": "length_aware_batch",
+      "entropy_max_abs_error_nats": 2.288818359375e-05,
+      "patches_equal": true,
+      "min_threshold_distance_nats": 0.13077616691589355
+    },
+    {
+      "length": 513,
+      "batch": 4,
+      "policy": "length_aware_rows",
+      "entropy_max_abs_error_nats": 5.0067901611328125e-05,
+      "patches_equal": true,
+      "min_threshold_distance_nats": 0.031841397285461426
+    },
+    {
+      "length": 513,
+      "batch": 4,
+      "policy": "length_aware_batch",
+      "entropy_max_abs_error_nats": 4.649162292480469e-06,
+      "patches_equal": true,
+      "min_threshold_distance_nats": 0.031841397285461426
+    },
+    {
+      "length": 2049,
+      "batch": 1,
+      "policy": "length_aware_rows",
+      "entropy_max_abs_error_nats": 5.245208740234375e-06,
+      "patches_equal": true,
+      "min_threshold_distance_nats": 0.04862844944000244
+    },
+    {
+      "length": 2049,
+      "batch": 1,
+      "policy": "length_aware_batch",
+      "entropy_max_abs_error_nats": 5.245208740234375e-06,
+      "patches_equal": true,
+      "min_threshold_distance_nats": 0.04862844944000244
+    },
+    {
+      "length": 2049,
+      "batch": 4,
+      "policy": "length_aware_rows",
+      "entropy_max_abs_error_nats": 5.245208740234375e-06,
+      "patches_equal": true,
+      "min_threshold_distance_nats": 0.003182053565979004
+    },
+    {
+      "length": 2049,
+      "batch": 4,
+      "policy": "length_aware_batch",
+      "entropy_max_abs_error_nats": 0.0,
+      "patches_equal": true,
+      "min_threshold_distance_nats": 0.003182053565979004
+    },
+    {
+      "length": 4097,
+      "batch": 1,
+      "policy": "length_aware_rows",
+      "entropy_max_abs_error_nats": 3.5762786865234375e-06,
+      "patches_equal": true,
+      "min_threshold_distance_nats": 0.028825879096984863
+    },
+    {
+      "length": 4097,
+      "batch": 1,
+      "policy": "length_aware_batch",
+      "entropy_max_abs_error_nats": 3.5762786865234375e-06,
+      "patches_equal": true,
+      "min_threshold_distance_nats": 0.028825879096984863
+    },
+    {
+      "length": 4097,
+      "batch": 4,
+      "policy": "length_aware_rows",
+      "entropy_max_abs_error_nats": 7.3909759521484375e-06,
+      "patches_equal": true,
+      "min_threshold_distance_nats": 0.008489251136779785
+    },
+    {
+      "length": 4097,
+      "batch": 4,
+      "policy": "length_aware_batch",
+      "entropy_max_abs_error_nats": 6.175041198730469e-05,
+      "patches_equal": true,
+      "min_threshold_distance_nats": 0.008489251136779785
+    },
+    {
+      "length": 8191,
+      "batch": 1,
+      "policy": "length_aware_rows",
+      "entropy_max_abs_error_nats": 0.0,
+      "patches_equal": true,
+      "min_threshold_distance_nats": 0.011046648025512695
+    },
+    {
+      "length": 8191,
+      "batch": 1,
+      "policy": "length_aware_batch",
+      "entropy_max_abs_error_nats": 0.0,
+      "patches_equal": true,
+      "min_threshold_distance_nats": 0.011046648025512695
+    },
+    {
+      "length": 8191,
+      "batch": 4,
+      "policy": "length_aware_rows",
+      "entropy_max_abs_error_nats": 0.0,
+      "patches_equal": true,
+      "min_threshold_distance_nats": 0.001482248306274414
+    },
+    {
+      "length": 8191,
+      "batch": 4,
+      "policy": "length_aware_batch",
+      "entropy_max_abs_error_nats": 4.9591064453125e-05,
+      "patches_equal": true,
+      "min_threshold_distance_nats": 0.001482248306274414
+    },
+    {
+      "length": 8192,
+      "batch": 1,
+      "policy": "length_aware_rows",
+      "entropy_max_abs_error_nats": 0.0,
+      "patches_equal": true,
+      "min_threshold_distance_nats": 0.0001983642578125
+    },
+    {
+      "length": 8192,
+      "batch": 1,
+      "policy": "length_aware_batch",
+      "entropy_max_abs_error_nats": 0.0,
+      "patches_equal": true,
+      "min_threshold_distance_nats": 0.0001983642578125
+    },
+    {
+      "length": 8192,
+      "batch": 4,
+      "policy": "length_aware_rows",
+      "entropy_max_abs_error_nats": 0.0,
+      "patches_equal": true,
+      "min_threshold_distance_nats": 0.003371000289916992
+    },
+    {
+      "length": 8192,
+      "batch": 4,
+      "policy": "length_aware_batch",
+      "entropy_max_abs_error_nats": 0.000118255615234375,
+      "patches_equal": true,
+      "min_threshold_distance_nats": 0.003371000289916992
+    },
+    {
+      "length": 8193,
+      "batch": 1,
+      "policy": "length_aware_rows",
+      "entropy_max_abs_error_nats": 3.814697265625e-06,
+      "patches_equal": true,
+      "min_threshold_distance_nats": 0.03672909736633301
+    },
+    {
+      "length": 8193,
+      "batch": 1,
+      "policy": "length_aware_batch",
+      "entropy_max_abs_error_nats": 3.814697265625e-06,
+      "patches_equal": true,
+      "min_threshold_distance_nats": 0.03672909736633301
+    },
+    {
+      "length": 8193,
+      "batch": 4,
+      "policy": "length_aware_rows",
+      "entropy_max_abs_error_nats": 1.1920928955078125e-05,
+      "patches_equal": true,
+      "min_threshold_distance_nats": 0.00228726863861084
+    },
+    {
+      "length": 8193,
+      "batch": 4,
+      "policy": "length_aware_batch",
+      "entropy_max_abs_error_nats": 5.4836273193359375e-05,
+      "patches_equal": true,
+      "min_threshold_distance_nats": 0.00228726863861084
+    }
+  ],
+  "causal_suffix_invariance": true,
+  "threshold_witness": {
+    "cutoff": 4.705758333206177,
+    "unguarded_patches_equal": false,
+    "guarded_patches_equal": true,
+    "fallback_rows": 5
+  },
+  "policy": {
+    "upstream_revision": "9774ed4fcc78313f9f218295f3d7e4decdadf2ae",
+    "dtype": "fp16",
+    "seed": 42,
+    "context_bytes": [
+      128,
+      512,
+      2048
+    ],
+    "batch_sizes": [
+      1,
+      4
+    ],
+    "output_steps": 8,
+    "warmup": 2,
+    "repeats": 5,
+    "quality_max_bytes": 128,
+    "profile": true,
+    "gpu_hourly_usd": null,
+    "legacy_cutlass_alias": true,
+    "checkpoint_kind": "pretrained",
+    "flex_kernel_policy": "t4",
+    "patcher_batch_policy": "isolated_rows",
+    "entropy_execution": "padded",
+    "entropy_microbatch_size": 4
+  }
+}

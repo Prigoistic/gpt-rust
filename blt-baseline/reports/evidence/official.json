@@ -1,0 +1,1109 @@
+{
+  "status": "COMPLETED",
+  "cases": [
+    {
+      "context_bytes": 128,
+      "batch": 1,
+      "steps": 8,
+      "prompt": "The rain stopped before dawn. The rain stopped before dawn. The rain stopped before dawn. The rain stopped before dawn. The rain",
+      "samples": [
+        {
+          "official_generate_nocache": {
+            "elapsed_seconds": 3.8173279529437423,
+            "generated_ids": [
+              [
+                36,
+                119,
+                120,
+                115,
+                116,
+                116,
+                105,
+                104
+              ]
+            ],
+            "outputs": [
+              {
+                "steps": 8,
+                "raw_byte_count": 8,
+                "special_token_count": 0,
+                "valid_utf8": true,
+                "raw_hex": "2073746f70706564",
+                "display_text": " stopped"
+              }
+            ],
+            "raw_byte_count": 8,
+            "peak_allocated_bytes": 9906616832,
+            "fallback_rows": 0
+          },
+          "m1": {
+            "elapsed_seconds": 0.3660294311121106,
+            "generated_ids": [
+              [
+                36,
+                119,
+                120,
+                115,
+                116,
+                116,
+                105,
+                104
+              ]
+            ],
+            "outputs": [
+              {
+                "steps": 8,
+                "raw_byte_count": 8,
+                "special_token_count": 0,
+                "valid_utf8": true,
+                "raw_hex": "2073746f70706564",
+                "display_text": " stopped"
+              }
+            ],
+            "raw_byte_count": 8,
+            "peak_allocated_bytes": 9519550976,
+            "fallback_rows": 0
+          }
+        },
+        {
+          "m1": {
+            "elapsed_seconds": 0.36343955993652344,
+            "generated_ids": [
+              [
+                36,
+                119,
+                120,
+                115,
+                116,
+                116,
+                105,
+                104
+              ]
+            ],
+            "outputs": [
+              {
+                "steps": 8,
+                "raw_byte_count": 8,
+                "special_token_count": 0,
+                "valid_utf8": true,
+                "raw_hex": "2073746f70706564",
+                "display_text": " stopped"
+              }
+            ],
+            "raw_byte_count": 8,
+            "peak_allocated_bytes": 9519550976,
+            "fallback_rows": 0
+          },
+          "official_generate_nocache": {
+            "elapsed_seconds": 3.8363950243219733,
+            "generated_ids": [
+              [
+                36,
+                119,
+                120,
+                115,
+                116,
+                116,
+                105,
+                104
+              ]
+            ],
+            "outputs": [
+              {
+                "steps": 8,
+                "raw_byte_count": 8,
+                "special_token_count": 0,
+                "valid_utf8": true,
+                "raw_hex": "2073746f70706564",
+                "display_text": " stopped"
+              }
+            ],
+            "raw_byte_count": 8,
+            "peak_allocated_bytes": 9906616832,
+            "fallback_rows": 0
+          }
+        },
+        {
+          "official_generate_nocache": {
+            "elapsed_seconds": 3.8598543852567673,
+            "generated_ids": [
+              [
+                36,
+                119,
+                120,
+                115,
+                116,
+                116,
+                105,
+                104
+              ]
+            ],
+            "outputs": [
+              {
+                "steps": 8,
+                "raw_byte_count": 8,
+                "special_token_count": 0,
+                "valid_utf8": true,
+                "raw_hex": "2073746f70706564",
+                "display_text": " stopped"
+              }
+            ],
+            "raw_byte_count": 8,
+            "peak_allocated_bytes": 9906616832,
+            "fallback_rows": 0
+          },
+          "m1": {
+            "elapsed_seconds": 0.36503616627305746,
+            "generated_ids": [
+              [
+                36,
+                119,
+                120,
+                115,
+                116,
+                116,
+                105,
+                104
+              ]
+            ],
+            "outputs": [
+              {
+                "steps": 8,
+                "raw_byte_count": 8,
+                "special_token_count": 0,
+                "valid_utf8": true,
+                "raw_hex": "2073746f70706564",
+                "display_text": " stopped"
+              }
+            ],
+            "raw_byte_count": 8,
+            "peak_allocated_bytes": 9519550976,
+            "fallback_rows": 0
+          }
+        },
+        {
+          "m1": {
+            "elapsed_seconds": 0.3647523084655404,
+            "generated_ids": [
+              [
+                36,
+                119,
+                120,
+                115,
+                116,
+                116,
+                105,
+                104
+              ]
+            ],
+            "outputs": [
+              {
+                "steps": 8,
+                "raw_byte_count": 8,
+                "special_token_count": 0,
+                "valid_utf8": true,
+                "raw_hex": "2073746f70706564",
+                "display_text": " stopped"
+              }
+            ],
+            "raw_byte_count": 8,
+            "peak_allocated_bytes": 9519550976,
+            "fallback_rows": 0
+          },
+          "official_generate_nocache": {
+            "elapsed_seconds": 3.874393103644252,
+            "generated_ids": [
+              [
+                36,
+                119,
+                120,
+                115,
+                116,
+                116,
+                105,
+                104
+              ]
+            ],
+            "outputs": [
+              {
+                "steps": 8,
+                "raw_byte_count": 8,
+                "special_token_count": 0,
+                "valid_utf8": true,
+                "raw_hex": "2073746f70706564",
+                "display_text": " stopped"
+              }
+            ],
+            "raw_byte_count": 8,
+            "peak_allocated_bytes": 9906616832,
+            "fallback_rows": 0
+          }
+        },
+        {
+          "official_generate_nocache": {
+            "elapsed_seconds": 3.880887354724109,
+            "generated_ids": [
+              [
+                36,
+                119,
+                120,
+                115,
+                116,
+                116,
+                105,
+                104
+              ]
+            ],
+            "outputs": [
+              {
+                "steps": 8,
+                "raw_byte_count": 8,
+                "special_token_count": 0,
+                "valid_utf8": true,
+                "raw_hex": "2073746f70706564",
+                "display_text": " stopped"
+              }
+            ],
+            "raw_byte_count": 8,
+            "peak_allocated_bytes": 9906616832,
+            "fallback_rows": 0
+          },
+          "m1": {
+            "elapsed_seconds": 0.3655516756698489,
+            "generated_ids": [
+              [
+                36,
+                119,
+                120,
+                115,
+                116,
+                116,
+                105,
+                104
+              ]
+            ],
+            "outputs": [
+              {
+                "steps": 8,
+                "raw_byte_count": 8,
+                "special_token_count": 0,
+                "valid_utf8": true,
+                "raw_hex": "2073746f70706564",
+                "display_text": " stopped"
+              }
+            ],
+            "raw_byte_count": 8,
+            "peak_allocated_bytes": 9519550976,
+            "fallback_rows": 0
+          }
+        }
+      ],
+      "orders": [
+        [
+          "official_generate_nocache",
+          "m1"
+        ],
+        [
+          "m1",
+          "official_generate_nocache"
+        ],
+        [
+          "official_generate_nocache",
+          "m1"
+        ],
+        [
+          "m1",
+          "official_generate_nocache"
+        ],
+        [
+          "official_generate_nocache",
+          "m1"
+        ]
+      ],
+      "summary": {
+        "official_generate_nocache": {
+          "samples": 5,
+          "raw_bytes_per_second_per_gpu": 2.075888481393689,
+          "batch_latency_seconds_median": 3.8598543852567673,
+          "batch_latency_seconds_p95": 3.8795885045081375,
+          "batch_latency_seconds_min": 3.8173279529437423,
+          "usd_per_million_raw_bytes": null,
+          "note": "Single-GPU closed-loop equal-length uncached batches; p95 is batch latency, not a serving SLO. Raw bytes may be invalid UTF-8.",
+          "paired_speedup_median": 1.0,
+          "paired_speedup_geomean": 1.0,
+          "paired_speedup_bootstrap_95": [
+            1.0,
+            1.0
+          ],
+          "fallback_rows": 0,
+          "peak_allocated_bytes": 9906616832,
+          "all_repeated_ids_equal": true
+        },
+        "m1": {
+          "samples": 5,
+          "raw_bytes_per_second_per_gpu": 21.920100623816822,
+          "batch_latency_seconds_median": 0.36503616627305746,
+          "batch_latency_seconds_p95": 0.3659338800236583,
+          "batch_latency_seconds_min": 0.36343955993652344,
+          "usd_per_million_raw_bytes": null,
+          "note": "Single-GPU closed-loop equal-length uncached batches; p95 is batch latency, not a serving SLO. Raw bytes may be invalid UTF-8.",
+          "paired_speedup_median": 10.573895799599994,
+          "paired_speedup_geomean": 10.55921179628408,
+          "paired_speedup_bootstrap_95": [
+            10.491576586707003,
+            10.610165595331035
+          ],
+          "fallback_rows": 0,
+          "peak_allocated_bytes": 9519550976,
+          "all_repeated_ids_equal": true
+        }
+      }
+    },
+    {
+      "context_bytes": 512,
+      "batch": 1,
+      "steps": 8,
+      "prompt": "The rain stopped before dawn. The rain stopped before dawn. The rain stopped before dawn. The rain stopped before dawn. The rain stopped before dawn. The rain stopped before dawn. The rain stopped before dawn. The rain stopped before dawn. The rain stopped before dawn. The rain stopped before dawn. The rain stopped before dawn. The rain stopped before dawn. The rain stopped before dawn. The rain stopped before dawn. The rain stopped before dawn. The rain stopped before dawn. The rain stopped before dawn. Th",
+      "samples": [
+        {
+          "official_generate_nocache": {
+            "elapsed_seconds": 3.976601448841393,
+            "generated_ids": [
+              [
+                105,
+                36,
+                118,
+                101,
+                109,
+                114,
+                36,
+                119
+              ]
+            ],
+            "outputs": [
+              {
+                "steps": 8,
+                "raw_byte_count": 8,
+                "special_token_count": 0,
+                "valid_utf8": true,
+                "raw_hex": "65207261696e2073",
+                "display_text": "e rain s"
+              }
+            ],
+            "raw_byte_count": 8,
+            "peak_allocated_bytes": 9907018240,
+            "fallback_rows": 0
+          },
+          "m1": {
+            "elapsed_seconds": 0.5331816654652357,
+            "generated_ids": [
+              [
+                105,
+                36,
+                118,
+                101,
+                109,
+                114,
+                36,
+                119
+              ]
+            ],
+            "outputs": [
+              {
+                "steps": 8,
+                "raw_byte_count": 8,
+                "special_token_count": 0,
+                "valid_utf8": true,
+                "raw_hex": "65207261696e2073",
+                "display_text": "e rain s"
+              }
+            ],
+            "raw_byte_count": 8,
+            "peak_allocated_bytes": 9538835968,
+            "fallback_rows": 0
+          }
+        },
+        {
+          "m1": {
+            "elapsed_seconds": 0.5322391325607896,
+            "generated_ids": [
+              [
+                105,
+                36,
+                118,
+                101,
+                109,
+                114,
+                36,
+                119
+              ]
+            ],
+            "outputs": [
+              {
+                "steps": 8,
+                "raw_byte_count": 8,
+                "special_token_count": 0,
+                "valid_utf8": true,
+                "raw_hex": "65207261696e2073",
+                "display_text": "e rain s"
+              }
+            ],
+            "raw_byte_count": 8,
+            "peak_allocated_bytes": 9538835968,
+            "fallback_rows": 0
+          },
+          "official_generate_nocache": {
+            "elapsed_seconds": 3.988596174865961,
+            "generated_ids": [
+              [
+                105,
+                36,
+                118,
+                101,
+                109,
+                114,
+                36,
+                119
+              ]
+            ],
+            "outputs": [
+              {
+                "steps": 8,
+                "raw_byte_count": 8,
+                "special_token_count": 0,
+                "valid_utf8": true,
+                "raw_hex": "65207261696e2073",
+                "display_text": "e rain s"
+              }
+            ],
+            "raw_byte_count": 8,
+            "peak_allocated_bytes": 9907018240,
+            "fallback_rows": 0
+          }
+        },
+        {
+          "official_generate_nocache": {
+            "elapsed_seconds": 4.002788005396724,
+            "generated_ids": [
+              [
+                105,
+                36,
+                118,
+                101,
+                109,
+                114,
+                36,
+                119
+              ]
+            ],
+            "outputs": [
+              {
+                "steps": 8,
+                "raw_byte_count": 8,
+                "special_token_count": 0,
+                "valid_utf8": true,
+                "raw_hex": "65207261696e2073",
+                "display_text": "e rain s"
+              }
+            ],
+            "raw_byte_count": 8,
+            "peak_allocated_bytes": 9907018240,
+            "fallback_rows": 0
+          },
+          "m1": {
+            "elapsed_seconds": 0.5342996455729008,
+            "generated_ids": [
+              [
+                105,
+                36,
+                118,
+                101,
+                109,
+                114,
+                36,
+                119
+              ]
+            ],
+            "outputs": [
+              {
+                "steps": 8,
+                "raw_byte_count": 8,
+                "special_token_count": 0,
+                "valid_utf8": true,
+                "raw_hex": "65207261696e2073",
+                "display_text": "e rain s"
+              }
+            ],
+            "raw_byte_count": 8,
+            "peak_allocated_bytes": 9538835968,
+            "fallback_rows": 0
+          }
+        },
+        {
+          "m1": {
+            "elapsed_seconds": 0.5341787505894899,
+            "generated_ids": [
+              [
+                105,
+                36,
+                118,
+                101,
+                109,
+                114,
+                36,
+                119
+              ]
+            ],
+            "outputs": [
+              {
+                "steps": 8,
+                "raw_byte_count": 8,
+                "special_token_count": 0,
+                "valid_utf8": true,
+                "raw_hex": "65207261696e2073",
+                "display_text": "e rain s"
+              }
+            ],
+            "raw_byte_count": 8,
+            "peak_allocated_bytes": 9538835968,
+            "fallback_rows": 0
+          },
+          "official_generate_nocache": {
+            "elapsed_seconds": 4.0167918261140585,
+            "generated_ids": [
+              [
+                105,
+                36,
+                118,
+                101,
+                109,
+                114,
+                36,
+                119
+              ]
+            ],
+            "outputs": [
+              {
+                "steps": 8,
+                "raw_byte_count": 8,
+                "special_token_count": 0,
+                "valid_utf8": true,
+                "raw_hex": "65207261696e2073",
+                "display_text": "e rain s"
+              }
+            ],
+            "raw_byte_count": 8,
+            "peak_allocated_bytes": 9907018240,
+            "fallback_rows": 0
+          }
+        },
+        {
+          "official_generate_nocache": {
+            "elapsed_seconds": 4.033451001159847,
+            "generated_ids": [
+              [
+                105,
+                36,
+                118,
+                101,
+                109,
+                114,
+                36,
+                119
+              ]
+            ],
+            "outputs": [
+              {
+                "steps": 8,
+                "raw_byte_count": 8,
+                "special_token_count": 0,
+                "valid_utf8": true,
+                "raw_hex": "65207261696e2073",
+                "display_text": "e rain s"
+              }
+            ],
+            "raw_byte_count": 8,
+            "peak_allocated_bytes": 9907018240,
+            "fallback_rows": 0
+          },
+          "m1": {
+            "elapsed_seconds": 0.5410948721691966,
+            "generated_ids": [
+              [
+                105,
+                36,
+                118,
+                101,
+                109,
+                114,
+                36,
+                119
+              ]
+            ],
+            "outputs": [
+              {
+                "steps": 8,
+                "raw_byte_count": 8,
+                "special_token_count": 0,
+                "valid_utf8": true,
+                "raw_hex": "65207261696e2073",
+                "display_text": "e rain s"
+              }
+            ],
+            "raw_byte_count": 8,
+            "peak_allocated_bytes": 9538835968,
+            "fallback_rows": 0
+          }
+        }
+      ],
+      "orders": [
+        [
+          "official_generate_nocache",
+          "m1"
+        ],
+        [
+          "m1",
+          "official_generate_nocache"
+        ],
+        [
+          "official_generate_nocache",
+          "m1"
+        ],
+        [
+          "m1",
+          "official_generate_nocache"
+        ],
+        [
+          "official_generate_nocache",
+          "m1"
+        ]
+      ],
+      "summary": {
+        "official_generate_nocache": {
+          "samples": 5,
+          "raw_bytes_per_second_per_gpu": 1.9981788142324677,
+          "batch_latency_seconds_median": 4.002788005396724,
+          "batch_latency_seconds_p95": 4.030119166150689,
+          "batch_latency_seconds_min": 3.976601448841393,
+          "usd_per_million_raw_bytes": null,
+          "note": "Single-GPU closed-loop equal-length uncached batches; p95 is batch latency, not a serving SLO. Raw bytes may be invalid UTF-8.",
+          "paired_speedup_median": 1.0,
+          "paired_speedup_geomean": 1.0,
+          "paired_speedup_bootstrap_95": [
+            1.0,
+            1.0
+          ],
+          "fallback_rows": 0,
+          "peak_allocated_bytes": 9907018240,
+          "all_repeated_ids_equal": true
+        },
+        "m1": {
+          "samples": 5,
+          "raw_bytes_per_second_per_gpu": 14.953304197218548,
+          "batch_latency_seconds_median": 0.5341787505894899,
+          "batch_latency_seconds_p95": 0.5397358268499375,
+          "batch_latency_seconds_min": 0.5322391325607896,
+          "usd_per_million_raw_bytes": null,
+          "note": "Single-GPU closed-loop equal-length uncached batches; p95 is batch latency, not a serving SLO. Raw bytes may be invalid UTF-8.",
+          "paired_speedup_median": 7.491653866071256,
+          "paired_speedup_geomean": 7.483500337042802,
+          "paired_speedup_bootstrap_95": [
+            7.462976006846329,
+            7.503742697160784
+          ],
+          "fallback_rows": 0,
+          "peak_allocated_bytes": 9538835968,
+          "all_repeated_ids_equal": true
+        }
+      }
+    },
+    {
+      "context_bytes": 2048,
+      "batch": 1,
+      "steps": 8,
+      "prompt": "The rain stopped before dawn. The rain stopped before dawn. The rain stopped before dawn. The rain stopped before dawn. The rain stopped before dawn. The rain stopped before dawn. The rain stopped before dawn. The rain stopped before dawn. The rain stopped before dawn. The rain stopped before dawn. The rain stopped before dawn. The rain stopped before dawn. The rain stopped before dawn. The rain stopped before dawn. The rain stopped before dawn. The rain stopped before dawn. The rain stopped before dawn. The rain stopped before dawn. The rain stopped before dawn. The rain stopped before dawn. The rain stopped before dawn. The rain stopped before dawn. The rain stopped before dawn. The rain stopped before dawn. The rain stopped before dawn. The rain stopped before dawn. The rain stopped before dawn. The rain stopped before dawn. The rain stopped before dawn. The rain stopped before dawn. The rain stopped before dawn. The rain stopped before dawn. The rain stopped before dawn. The rain stopped before dawn. The rain stopped before dawn. The rain stopped before dawn. The rain stopped before dawn. The rain stopped before dawn. The rain stopped before dawn. The rain stopped before dawn. The rain stopped before dawn. The rain stopped before dawn. The rain stopped before dawn. The rain stopped before dawn. The rain stopped before dawn. The rain stopped before dawn. The rain stopped before dawn. The rain stopped before dawn. The rain stopped before dawn. The rain stopped before dawn. The rain stopped before dawn. The rain stopped before dawn. The rain stopped before dawn. The rain stopped before dawn. The rain stopped before dawn. The rain stopped before dawn. The rain stopped before dawn. The rain stopped before dawn. The rain stopped before dawn. The rain stopped before dawn. The rain stopped before dawn. The rain stopped before dawn. The rain stopped before dawn. The rain stopped before dawn. The rain stopped before dawn. The rain stopped before dawn. The rain stopped before dawn. The rain stopped before dawn. The rain",
+      "samples": [
+        {
+          "official_generate_nocache": {
+            "elapsed_seconds": 4.388050741516054,
+            "generated_ids": [
+              [
+                36,
+                119,
+                120,
+                115,
+                116,
+                116,
+                105,
+                104
+              ]
+            ],
+            "outputs": [
+              {
+                "steps": 8,
+                "raw_byte_count": 8,
+                "special_token_count": 0,
+                "valid_utf8": true,
+                "raw_hex": "2073746f70706564",
+                "display_text": " stopped"
+              }
+            ],
+            "raw_byte_count": 8,
+            "peak_allocated_bytes": 9908623360,
+            "fallback_rows": 0
+          },
+          "m1": {
+            "elapsed_seconds": 1.5775300208479166,
+            "generated_ids": [
+              [
+                36,
+                119,
+                120,
+                115,
+                116,
+                116,
+                105,
+                104
+              ]
+            ],
+            "outputs": [
+              {
+                "steps": 8,
+                "raw_byte_count": 8,
+                "special_token_count": 0,
+                "valid_utf8": true,
+                "raw_hex": "2073746f70706564",
+                "display_text": " stopped"
+              }
+            ],
+            "raw_byte_count": 8,
+            "peak_allocated_bytes": 9613182464,
+            "fallback_rows": 0
+          }
+        },
+        {
+          "m1": {
+            "elapsed_seconds": 1.5832924395799637,
+            "generated_ids": [
+              [
+                36,
+                119,
+                120,
+                115,
+                116,
+                116,
+                105,
+                104
+              ]
+            ],
+            "outputs": [
+              {
+                "steps": 8,
+                "raw_byte_count": 8,
+                "special_token_count": 0,
+                "valid_utf8": true,
+                "raw_hex": "2073746f70706564",
+                "display_text": " stopped"
+              }
+            ],
+            "raw_byte_count": 8,
+            "peak_allocated_bytes": 9613182464,
+            "fallback_rows": 0
+          },
+          "official_generate_nocache": {
+            "elapsed_seconds": 4.409063717350364,
+            "generated_ids": [
+              [
+                36,
+                119,
+                120,
+                115,
+                116,
+                116,
+                105,
+                104
+              ]
+            ],
+            "outputs": [
+              {
+                "steps": 8,
+                "raw_byte_count": 8,
+                "special_token_count": 0,
+                "valid_utf8": true,
+                "raw_hex": "2073746f70706564",
+                "display_text": " stopped"
+              }
+            ],
+            "raw_byte_count": 8,
+            "peak_allocated_bytes": 9908623360,
+            "fallback_rows": 0
+          }
+        },
+        {
+          "official_generate_nocache": {
+            "elapsed_seconds": 4.429309166036546,
+            "generated_ids": [
+              [
+                36,
+                119,
+                120,
+                115,
+                116,
+                116,
+                105,
+                104
+              ]
+            ],
+            "outputs": [
+              {
+                "steps": 8,
+                "raw_byte_count": 8,
+                "special_token_count": 0,
+                "valid_utf8": true,
+                "raw_hex": "2073746f70706564",
+                "display_text": " stopped"
+              }
+            ],
+            "raw_byte_count": 8,
+            "peak_allocated_bytes": 9908623360,
+            "fallback_rows": 0
+          },
+          "m1": {
+            "elapsed_seconds": 1.5971132405102253,
+            "generated_ids": [
+              [
+                36,
+                119,
+                120,
+                115,
+                116,
+                116,
+                105,
+                104
+              ]
+            ],
+            "outputs": [
+              {
+                "steps": 8,
+                "raw_byte_count": 8,
+                "special_token_count": 0,
+                "valid_utf8": true,
+                "raw_hex": "2073746f70706564",
+                "display_text": " stopped"
+              }
+            ],
+            "raw_byte_count": 8,
+            "peak_allocated_bytes": 9613182464,
+            "fallback_rows": 0
+          }
+        },
+        {
+          "m1": {
+            "elapsed_seconds": 1.5993940122425556,
+            "generated_ids": [
+              [
+                36,
+                119,
+                120,
+                115,
+                116,
+                116,
+                105,
+                104
+              ]
+            ],
+            "outputs": [
+              {
+                "steps": 8,
+                "raw_byte_count": 8,
+                "special_token_count": 0,
+                "valid_utf8": true,
+                "raw_hex": "2073746f70706564",
+                "display_text": " stopped"
+              }
+            ],
+            "raw_byte_count": 8,
+            "peak_allocated_bytes": 9613182464,
+            "fallback_rows": 0
+          },
+          "official_generate_nocache": {
+            "elapsed_seconds": 4.4481705743819475,
+            "generated_ids": [
+              [
+                36,
+                119,
+                120,
+                115,
+                116,
+                116,
+                105,
+                104
+              ]
+            ],
+            "outputs": [
+              {
+                "steps": 8,
+                "raw_byte_count": 8,
+                "special_token_count": 0,
+                "valid_utf8": true,
+                "raw_hex": "2073746f70706564",
+                "display_text": " stopped"
+              }
+            ],
+            "raw_byte_count": 8,
+            "peak_allocated_bytes": 9908623360,
+            "fallback_rows": 0
+          }
+        },
+        {
+          "official_generate_nocache": {
+            "elapsed_seconds": 4.456453139893711,
+            "generated_ids": [
+              [
+                36,
+                119,
+                120,
+                115,
+                116,
+                116,
+                105,
+                104
+              ]
+            ],
+            "outputs": [
+              {
+                "steps": 8,
+                "raw_byte_count": 8,
+                "special_token_count": 0,
+                "valid_utf8": true,
+                "raw_hex": "2073746f70706564",
+                "display_text": " stopped"
+              }
+            ],
+            "raw_byte_count": 8,
+            "peak_allocated_bytes": 9908623360,
+            "fallback_rows": 0
+          },
+          "m1": {
+            "elapsed_seconds": 1.6023341165855527,
+            "generated_ids": [
+              [
+                36,
+                119,
+                120,
+                115,
+                116,
+                116,
+                105,
+                104
+              ]
+            ],
+            "outputs": [
+              {
+                "steps": 8,
+                "raw_byte_count": 8,
+                "special_token_count": 0,
+                "valid_utf8": true,
+                "raw_hex": "2073746f70706564",
+                "display_text": " stopped"
+              }
+            ],
+            "raw_byte_count": 8,
+            "peak_allocated_bytes": 9613182464,
+            "fallback_rows": 0
+          }
+        }
+      ],
+      "orders": [
+        [
+          "official_generate_nocache",
+          "m1"
+        ],
+        [
+          "m1",
+          "official_generate_nocache"
+        ],
+        [
+          "official_generate_nocache",
+          "m1"
+        ],
+        [
+          "m1",
+          "official_generate_nocache"
+        ],
+        [
+          "official_generate_nocache",
+          "m1"
+        ]
+      ],
+      "summary": {
+        "official_generate_nocache": {
+          "samples": 5,
+          "raw_bytes_per_second_per_gpu": 1.8074155907293166,
+          "batch_latency_seconds_median": 4.429309166036546,
+          "batch_latency_seconds_p95": 4.454796626791358,
+          "batch_latency_seconds_min": 4.388050741516054,
+          "usd_per_million_raw_bytes": null,
+          "note": "Single-GPU closed-loop equal-length uncached batches; p95 is batch latency, not a serving SLO. Raw bytes may be invalid UTF-8.",
+          "paired_speedup_median": 1.0,
+          "paired_speedup_geomean": 1.0,
+          "paired_speedup_bootstrap_95": [
+            1.0,
+            1.0
+          ],
+          "fallback_rows": 0,
+          "peak_allocated_bytes": 9908623360,
+          "all_repeated_ids_equal": true
+        },
+        "m1": {
+          "samples": 5,
+          "raw_bytes_per_second_per_gpu": 5.0253378604275625,
+          "batch_latency_seconds_median": 1.5971132405102253,
+          "batch_latency_seconds_p95": 1.6017460957169534,
+          "batch_latency_seconds_min": 1.5775300208479166,
+          "usd_per_million_raw_bytes": null,
+          "note": "Single-GPU closed-loop equal-length uncached batches; p95 is batch latency, not a serving SLO. Raw bytes may be invalid UTF-8.",
+          "paired_speedup_median": 2.781225896500325,
+          "paired_speedup_geomean": 2.7804068664657797,
+          "paired_speedup_bootstrap_95": [
+            2.776554647304704,
+            2.7833228728383848
+          ],
+          "fallback_rows": 0,
+          "peak_allocated_bytes": 9613182464,
+          "all_repeated_ids_equal": true
+        }
+      }
+    }
+  ],
+  "boundary": "Single-request complete function calls plus raw-byte accounting; loading/warmup excluded. Official single-rank NCCL bookkeeping retained.",
+  "upstream_generator": "bytelatent.generate_blt.generate_nocache",
+  "note": "Uncached official generator, adapted only for admitted T4 runtime/precision; not published cached or H200 performance.",
+  "generator_sha256": "ec576eaac0aa6789eea48d607b48098e0341acccf1d54ad2e989638fff0c73af",
+  "policy": {
+    "upstream_revision": "9774ed4fcc78313f9f218295f3d7e4decdadf2ae",
+    "dtype": "fp16",
+    "seed": 42,
+    "context_bytes": [
+      128,
+      512,
+      2048
+    ],
+    "batch_sizes": [
+      1,
+      4
+    ],
+    "output_steps": 8,
+    "warmup": 2,
+    "repeats": 5,
+    "quality_max_bytes": 128,
+    "profile": true,
+    "gpu_hourly_usd": null,
+    "legacy_cutlass_alias": true,
+    "checkpoint_kind": "pretrained",
+    "flex_kernel_policy": "t4",
+    "patcher_batch_policy": "isolated_rows",
+    "entropy_execution": "padded",
+    "entropy_microbatch_size": 4
+  }
+}

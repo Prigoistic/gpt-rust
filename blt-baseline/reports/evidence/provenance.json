@@ -1,0 +1,141 @@
+{
+  "schema_version": 1,
+  "publication_date": "2026-11-21",
+  "measurement_dates": [
+    "2026-11-07",
+    "2026-11-17"
+  ],
+  "export_kind": "public projection; immutable original files and source archives remain outside this repository",
+  "removed_fields": [
+    "local filesystem/config paths",
+    "intermediate trace filenames",
+    "GPU command snapshots (host/runtime details)"
+  ],
+  "preserved_fields": "numerical results, raw timing samples, prompts, generated IDs, byte accounting, quality observations, parity checks and profile ranges",
+  "original_files": {
+    "m0": {
+      "sha256": "42b2efafa7d42b5054c6d5b54f1f8925c48b1ca89bb865f3547a0dfe93d48b94",
+      "export_sha256": "2afb1760768f00a958f82854e4899aa1055b175fa4377bf0c95259f35c632e28"
+    },
+    "m1": {
+      "sha256": "6c59c39ddc67ae380fcfb6a0f1f66a8b5abcf18d8534510c7b0727624de8c554",
+      "export_sha256": "10515d186bb30015af65c9334c0cc7641fe2f4c0574863f27ebab78ed4af83e1"
+    },
+    "official": {
+      "sha256": "6d4b85d70f90dfab5ccb9e78512cb97ce697e1831347c58cb2db958366f245b7",
+      "export_sha256": "5428eec8fbe404aa64ced88e547075b3846a08e5cfea9fc58ec3d0a9ff8796ea"
+    },
+    "entropy-gate": {
+      "sha256": "a7e548cadf95697243f8cc1106caf820ab87cef14b28d18859062c0adfe1c445",
+      "export_sha256": "b69ca40679301984343e8317a0f7a93bc4f74a082b7b64a30adc2d3d33b69c9c"
+    },
+    "decode-audit": {
+      "sha256": "0505f04e89f4e7dc26b6a64946d21c3e2f3b4c91802e43de4f032cf079e9f596",
+      "export_sha256": "0505f04e89f4e7dc26b6a64946d21c3e2f3b4c91802e43de4f032cf079e9f596"
+    }
+  },
+  "measured_package_source": [
+    {
+      "path": "__init__.py",
+      "bytes": 112,
+      "sha256": "2b601ee025667ab9cd465b453ac7a85fe2df92b78ca02f1d3ee964defc03e065"
+    },
+    {
+      "path": "cli.py",
+      "bytes": 1519,
+      "sha256": "2aad7443e75b888e034c61e489e64a52068c87f530ee56d18d167b84cecacde8"
+    },
+    {
+      "path": "comparison.py",
+      "bytes": 1654,
+      "sha256": "f39b76e982eac2d3ffb8ab205574a33476f825f37e92b2878199bcab218bb938"
+    },
+    {
+      "path": "entropy.py",
+      "bytes": 4319,
+      "sha256": "a7e3b0d395afb505d848e1357a71e4cae18064562c288b0359090bfdea6f457e"
+    },
+    {
+      "path": "evidence.py",
+      "bytes": 8688,
+      "sha256": "8ec248b17a155a459a80da3701f7a8c9aa9c91c12338df1ff8f63ae402f1652b"
+    },
+    {
+      "path": "native.py",
+      "bytes": 19372,
+      "sha256": "22a8e2f32f9de24e74ff17c3b372338e106833ea5719c9a6a801b0746d4705bf"
+    },
+    {
+      "path": "runner.py",
+      "bytes": 18127,
+      "sha256": "f14d5d39882d3d9cc2a579a9ea2911ca71728f56afd47c00f48afec15b9644e1"
+    },
+    {
+      "path": "workloads.py",
+      "bytes": 2349,
+      "sha256": "92f07aa6de64ee1011b6fae6e2e9293e35e6160107623ae514756241542d477b"
+    }
+  ],
+  "measured_test_source": [
+    {
+      "path": "test_comparison.py",
+      "bytes": 1171,
+      "sha256": "6b066dabcbfffe90e9071d280f5ad98ccfd0230ee202b1755339480bec2d087e"
+    },
+    {
+      "path": "test_entropy_execution.py",
+      "bytes": 5821,
+      "sha256": "39583baf281b11ace9dd9844838abe9f341ac8fe7b0084d9fc08ed92920fc2cb"
+    },
+    {
+      "path": "test_measurement.py",
+      "bytes": 6621,
+      "sha256": "840d46c5ccac6bcc9e1bcea00e07056e099de98c525d20bed27963f5c94dcb94"
+    },
+    {
+      "path": "test_native_contract.py",
+      "bytes": 12789,
+      "sha256": "7dffd1ffe234cb17ec041dcdeddda311216693eae444b84916b170cffd241a72"
+    }
+  ],
+  "upstream_revision": "9774ed4fcc78313f9f218295f3d7e4decdadf2ae",
+  "weights": {
+    "facebook/blt-1b": {
+      "revision": "8134b32f0b1d25d1248c30e8c7bdfd442d3bb380",
+      "sha256": "3738bef71ca45c1ac58783c93c6eee8da6feefc0672113bcccd0a44cfd3cfe1f"
+    },
+    "facebook/blt-entropy": {
+      "revision": "f2aae511e44e2086b1204bc4ddec6ac6c9651332",
+      "sha256": "aa45c5ffae9f528329d146a91356d1d06056b71653beddada39781bfcadb521d"
+    }
+  },
+  "measurement_runtime": {
+    "gpu": "Tesla T4",
+    "gpu_memory_gib": 16,
+    "packages": {
+      "huggingface-hub": "0.30.2",
+      "numpy": "2.4.6",
+      "pydantic": "2.11.4",
+      "pytest": "9.0.2",
+      "safetensors": "0.8.0",
+      "torch": "2.10.0+cu128",
+      "triton": "3.6.0",
+      "xformers": "0.0.35"
+    },
+    "kv_cache": false,
+    "main_dtype": "fp16",
+    "entropy_dtype": "fp32",
+    "tf32": false
+  },
+  "validation": {
+    "local_harness_passed": 59,
+    "azure_harness_passed": 59,
+    "entropy_cases": 36,
+    "full_model_comparisons": 27,
+    "generated_prefix_comparisons": 108
+  },
+  "original_archives": {
+    "m1_source_archive_sha256": "fee20d157e1ed142f6107072a4d13e86806dc7ee0d45c31b62b7e1b06aa06392",
+    "official_source_archive_sha256": "778ddad7ac35dd632a3340f0c0cfe5b7acb1a1c88fb3670b8e447bd4823b8753"
+  }
+}

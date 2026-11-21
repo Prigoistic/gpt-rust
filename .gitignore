@@ -12,3 +12,6 @@ crates/*/target/
 
 # Benchmark corpora
 bench-data/
+
+# Official upstream source is prepared locally, never vendored into this repo
+vendor/blt/

@@ -1,0 +1,29 @@
+{
+  "upstream": "../../vendor/blt",
+  "upstream_revision": "9774ed4fcc78313f9f218295f3d7e4decdadf2ae",
+  "blt_snapshot": "~/.cache/huggingface/hub/models--facebook--blt-1b/snapshots/8134b32f0b1d25d1248c30e8c7bdfd442d3bb380",
+  "entropy_snapshot": "~/.cache/huggingface/hub/models--facebook--blt-entropy/snapshots/f2aae511e44e2086b1204bc4ddec6ac6c9651332",
+  "workload": "../data/diagnostics.jsonl",
+  "dtype": "fp16",
+  "seed": 42,
+  "context_bytes": [
+    128,
+    512,
+    2048
+  ],
+  "batch_sizes": [
+    1,
+    4
+  ],
+  "output_steps": 8,
+  "warmup": 2,
+  "repeats": 5,
+  "quality_max_bytes": 128,
+  "profile": true,
+  "gpu_hourly_usd": null,
+  "legacy_cutlass_alias": true,
+  "flex_kernel_policy": "t4",
+  "patcher_batch_policy": "isolated_rows",
+  "entropy_execution": "length_aware_batch",
+  "entropy_microbatch_size": 4
+}

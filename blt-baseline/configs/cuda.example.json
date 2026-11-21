@@ -1,0 +1,17 @@
+{
+  "upstream": "/path/to/pinned/facebookresearch-blt",
+  "upstream_revision": "9774ed4fcc78313f9f218295f3d7e4decdadf2ae",
+  "blt_snapshot": "/path/to/immutable/blt-1b-snapshot",
+  "entropy_snapshot": "/path/to/immutable/blt-entropy-snapshot",
+  "workload": "../data/diagnostics.jsonl",
+  "dtype": "bf16",
+  "seed": 42,
+  "context_bytes": [128, 512, 2048],
+  "batch_sizes": [1, 4],
+  "output_steps": 32,
+  "warmup": 2,
+  "repeats": 5,
+  "quality_max_bytes": 128,
+  "profile": true,
+  "gpu_hourly_usd": null
+}

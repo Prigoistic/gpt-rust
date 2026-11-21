@@ -1,0 +1,10 @@
+{"id":"prose-1","category":"prose","prompt":"The rain stopped before dawn. ","continuation":"By morning, the streets were quiet.","exact_match":false}
+{"id":"code-1","category":"code","prompt":"def square(x):\n    return ","continuation":"x * x\n","exact_match":false}
+{"id":"arithmetic-1","category":"computed_value","prompt":"Return only the integer.\n17 + 25 = ","continuation":"42","exact_match":true}
+{"id":"copy-1","category":"copy_control","prompt":"Copy exactly the text between brackets, with no extra characters.\n[k9_Z7]\nAnswer: ","continuation":"k9_Z7","exact_match":true}
+{"id":"lookup-1","category":"lookup_control","prompt":"Table: amber=17; violet=63; teal=29.\nReturn only the value for violet: ","continuation":"63","exact_match":true}
+{"id":"unicode-1","category":"multilingual","prompt":"日本語の文章です。 ","continuation":"今日は晴れです。","exact_match":false}
+{"id":"unicode-2","category":"multilingual","prompt":"हिन्दी में एक वाक्य: ","continuation":"आज मौसम अच्छा है।","exact_match":false}
+{"id":"boundary-1","category":"boundary_control","prompt":"Complete the word: inter","continuation":"national","exact_match":false}
+{"id":"boundary-2","category":"boundary_control","prompt":"Complete the word: international","continuation":"ization","exact_match":false}
+{"id":"noise-1","category":"noise_control","prompt":"Independent random-looking identifier: ","continuation":"q7M2v9R4s1","exact_match":false}

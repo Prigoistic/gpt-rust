@@ -1,0 +1,3018 @@
+{
+  "status": "COMPLETED",
+  "parity": {
+    "status": "PASS",
+    "upstream_greedy_equal": true,
+    "batch_greedy_equal": true,
+    "patches_batch_independent": true,
+    "batch_logit_max_abs_error": 0.0078125,
+    "entropy_batch_max_abs_error_nats": 0.0,
+    "logit_atol": 0.05,
+    "logit_rtol": 0.05,
+    "steps": 4,
+    "note": "One prompt and an equal-length distractor; not exhaustive numerical certification."
+  },
+  "quality": [
+    {
+      "id": "prose-1",
+      "category": "prose",
+      "nll_nats": 17.034887340671048,
+      "scored_bytes": 35,
+      "bpb": 0.7021756425282373,
+      "fixed_length_match": null
+    },
+    {
+      "id": "code-1",
+      "category": "code",
+      "nll_nats": 1.3502305308356881,
+      "scored_bytes": 6,
+      "bpb": 0.32466181514892,
+      "fixed_length_match": null
+    },
+    {
+      "id": "arithmetic-1",
+      "category": "computed_value",
+      "nll_nats": 0.83946568146348,
+      "scored_bytes": 2,
+      "bpb": 0.6055464878219184,
+      "fixed_length_match": true
+    },
+    {
+      "id": "copy-1",
+      "category": "copy_control",
+      "nll_nats": 3.015985857695341,
+      "scored_bytes": 5,
+      "bpb": 0.870229568057663,
+      "fixed_length_match": false
+    },
+    {
+      "id": "lookup-1",
+      "category": "lookup_control",
+      "nll_nats": 2.9389116233214736,
+      "scored_bytes": 2,
+      "bpb": 2.119976612288412,
+      "fixed_length_match": false
+    },
+    {
+      "id": "unicode-1",
+      "category": "multilingual",
+      "nll_nats": 14.221594162689144,
+      "scored_bytes": 24,
+      "bpb": 0.8548926405019608,
+      "fixed_length_match": null
+    },
+    {
+      "id": "unicode-2",
+      "category": "multilingual",
+      "nll_nats": 24.864075822378254,
+      "scored_bytes": 45,
+      "bpb": 0.7971395307829396,
+      "fixed_length_match": null
+    },
+    {
+      "id": "boundary-1",
+      "category": "boundary_control",
+      "nll_nats": 2.7905629128217697,
+      "scored_bytes": 8,
+      "bpb": 0.5032414094520785,
+      "fixed_length_match": null
+    },
+    {
+      "id": "boundary-2",
+      "category": "boundary_control",
+      "nll_nats": 3.7491970700211823,
+      "scored_bytes": 7,
+      "bpb": 0.7727068600335703,
+      "fixed_length_match": null
+    },
+    {
+      "id": "noise-1",
+      "category": "noise_control",
+      "nll_nats": 48.54579973220825,
+      "scored_bytes": 10,
+      "bpb": 7.003678452964562,
+      "fixed_length_match": null
+    }
+  ],
+  "quality_summary": {
+    "scored_bytes": 144,
+    "nll_nats": 119.35071073410563,
+    "bpb": 1.19574082293519,
+    "fixed_length_correct": 1,
+    "fixed_length_total": 3,
+    "note": "Authored diagnostic continuations; not a representative downstream benchmark."
+  },
+  "quality_by_category": {
+    "boundary_control": {
+      "scored_bytes": 15,
+      "nll_nats": 6.539759982842952,
+      "bpb": 0.6289919530567747,
+      "fixed_length_correct": 0,
+      "fixed_length_total": 0,
+      "note": "Authored diagnostic continuations; not a representative downstream benchmark."
+    },
+    "code": {
+      "scored_bytes": 6,
+      "nll_nats": 1.3502305308356881,
+      "bpb": 0.32466181514892,
+      "fixed_length_correct": 0,
+      "fixed_length_total": 0,
+      "note": "Authored diagnostic continuations; not a representative downstream benchmark."
+    },
+    "computed_value": {
+      "scored_bytes": 2,
+      "nll_nats": 0.83946568146348,
+      "bpb": 0.6055464878219184,
+      "fixed_length_correct": 1,
+      "fixed_length_total": 1,
+      "note": "Authored diagnostic continuations; not a representative downstream benchmark."
+    },
+    "copy_control": {
+      "scored_bytes": 5,
+      "nll_nats": 3.015985857695341,
+      "bpb": 0.870229568057663,
+      "fixed_length_correct": 0,
+      "fixed_length_total": 1,
+      "note": "Authored diagnostic continuations; not a representative downstream benchmark."
+    },
+    "lookup_control": {
+      "scored_bytes": 2,
+      "nll_nats": 2.9389116233214736,
+      "bpb": 2.119976612288412,
+      "fixed_length_correct": 0,
+      "fixed_length_total": 1,
+      "note": "Authored diagnostic continuations; not a representative downstream benchmark."
+    },
+    "multilingual": {
+      "scored_bytes": 69,
+      "nll_nats": 39.0856699850674,
+      "bpb": 0.8172275689460774,
+      "fixed_length_correct": 0,
+      "fixed_length_total": 0,
+      "note": "Authored diagnostic continuations; not a representative downstream benchmark."
+    },
+    "noise_control": {
+      "scored_bytes": 10,
+      "nll_nats": 48.54579973220825,
+      "bpb": 7.003678452964562,
+      "fixed_length_correct": 0,
+      "fixed_length_total": 0,
+      "note": "Authored diagnostic continuations; not a representative downstream benchmark."
+    },
+    "prose": {
+      "scored_bytes": 35,
+      "nll_nats": 17.034887340671048,
+      "bpb": 0.7021756425282373,
+      "fixed_length_correct": 0,
+      "fixed_length_total": 0,
+      "note": "Authored diagnostic continuations; not a representative downstream benchmark."
+    }
+  },
+  "policy": {
+    "upstream_revision": "9774ed4fcc78313f9f218295f3d7e4decdadf2ae",
+    "dtype": "fp16",
+    "seed": 42,
+    "context_bytes": [
+      128,
+      512,
+      2048
+    ],
+    "batch_sizes": [
+      1,
+      4
+    ],
+    "output_steps": 8,
+    "warmup": 2,
+    "repeats": 5,
+    "quality_max_bytes": 128,
+    "profile": true,
+    "gpu_hourly_usd": null,
+    "legacy_cutlass_alias": true,
+    "checkpoint_kind": "pretrained",
+    "flex_kernel_policy": "t4",
+    "patcher_batch_policy": "isolated_rows"
+  },
+  "measurement_date": "2026-11-07",
+  "performance": [
+    {
+      "requested_context_bytes": 128,
+      "actual_context_bytes": 128,
+      "batch_size": 1,
+      "output_steps": 8,
+      "warmup": 2,
+      "samples": [
+        {
+          "elapsed_seconds": 4.084017093293369,
+          "raw_byte_count": 8,
+          "outputs": [
+            {
+              "steps": 8,
+              "raw_byte_count": 8,
+              "special_token_count": 0,
+              "valid_utf8": true,
+              "raw_hex": "2073746f70706564",
+              "display_text": " stopped"
+            }
+          ],
+          "generated_ids": [
+            [
+              36,
+              119,
+              120,
+              115,
+              116,
+              116,
+              105,
+              104
+            ]
+          ]
+        },
+        {
+          "elapsed_seconds": 4.0979067529551685,
+          "raw_byte_count": 8,
+          "outputs": [
+            {
+              "steps": 8,
+              "raw_byte_count": 8,
+              "special_token_count": 0,
+              "valid_utf8": true,
+              "raw_hex": "2073746f70706564",
+              "display_text": " stopped"
+            }
+          ],
+          "generated_ids": [
+            [
+              36,
+              119,
+              120,
+              115,
+              116,
+              116,
+              105,
+              104
+            ]
+          ]
+        },
+        {
+          "elapsed_seconds": 4.103755051270127,
+          "raw_byte_count": 8,
+          "outputs": [
+            {
+              "steps": 8,
+              "raw_byte_count": 8,
+              "special_token_count": 0,
+              "valid_utf8": true,
+              "raw_hex": "2073746f70706564",
+              "display_text": " stopped"
+            }
+          ],
+          "generated_ids": [
+            [
+              36,
+              119,
+              120,
+              115,
+              116,
+              116,
+              105,
+              104
+            ]
+          ]
+        },
+        {
+          "elapsed_seconds": 4.1167211518622935,
+          "raw_byte_count": 8,
+          "outputs": [
+            {
+              "steps": 8,
+              "raw_byte_count": 8,
+              "special_token_count": 0,
+              "valid_utf8": true,
+              "raw_hex": "2073746f70706564",
+              "display_text": " stopped"
+            }
+          ],
+          "generated_ids": [
+            [
+              36,
+              119,
+              120,
+              115,
+              116,
+              116,
+              105,
+              104
+            ]
+          ]
+        },
+        {
+          "elapsed_seconds": 4.129589917138219,
+          "raw_byte_count": 8,
+          "outputs": [
+            {
+              "steps": 8,
+              "raw_byte_count": 8,
+              "special_token_count": 0,
+              "valid_utf8": true,
+              "raw_hex": "2073746f70706564",
+              "display_text": " stopped"
+            }
+          ],
+          "generated_ids": [
+            [
+              36,
+              119,
+              120,
+              115,
+              116,
+              116,
+              105,
+              104
+            ]
+          ]
+        }
+      ],
+      "summary": {
+        "samples": 5,
+        "raw_bytes_per_second_per_gpu": 1.948179405173422,
+        "batch_latency_seconds_median": 4.103755051270127,
+        "batch_latency_seconds_p95": 4.127016164083034,
+        "batch_latency_seconds_min": 4.084017093293369,
+        "usd_per_million_raw_bytes": null,
+        "note": "Single-GPU closed-loop equal-length uncached batches; p95 is batch latency, not a serving SLO. Raw bytes may be invalid UTF-8."
+      },
+      "memory": {
+        "resident_allocated_bytes": 9512076288,
+        "peak_allocated_bytes": 9906613760,
+        "peak_reserved_bytes": 10099884032
+      },
+      "diagnostics": {
+        "model_forward_calls": 8,
+        "patcher_calls": 8,
+        "prefix_byte_or_bos_positions_reprocessed": 1060,
+        "patch_positions_including_next_slot": 168,
+        "note": "Uncached work summed across steps; not unique committed patches or per-layer NFEs."
+      },
+      "synchronized_diagnostic": {
+        "first_step_gpu_ready_seconds": 0.514609495177865,
+        "inter_step_seconds": [
+          0.5177235477603972,
+          0.5146820051595569,
+          0.5189101337455213,
+          0.5150735219940543,
+          0.5195109560154378,
+          0.5152342431247234,
+          0.5174842849373817
+        ],
+        "note": "Separate synchronized pass; observer overhead included. Not network TTFT or production inter-output latency."
+      },
+      "profile_inclusive_ranges": [
+        {
+          "name": "blt::frontend",
+          "calls": 1,
+          "cpu_total_us": 682.7,
+          "cpu_self_us": 208.34100000000018,
+          "device_total_us": 2.9760000000001128,
+          "device_self_us": 0.0
+        },
+        {
+          "name": "blt::frontend",
+          "calls": 1,
+          "cpu_total_us": 0,
+          "cpu_self_us": 0,
+          "device_total_us": 88.70299999999997,
+          "device_self_us": 88.70299999999997
+        },
+        {
+          "name": "blt::patcher",
+          "calls": 8,
+          "cpu_total_us": 3870524.871,
+          "cpu_self_us": 4847.262000002025,
+          "device_total_us": 3849012.3719999883,
+          "device_self_us": 0.0
+        },
+        {
+          "name": "blt::patcher",
+          "calls": 8,
+          "cpu_total_us": 0,
+          "cpu_self_us": 0,
+          "device_total_us": 3869414.8309999993,
+          "device_self_us": 3869414.8309999993
+        },
+        {
+          "name": "blt::entropy_model",
+          "calls": 8,
+          "cpu_total_us": 117302.45200000057,
+          "cpu_self_us": 44682.434999995756,
+          "device_total_us": 3847453.650999994,
+          "device_self_us": 0.0
+        },
+        {
+          "name": "blt::entropy_model",
+          "calls": 8,
+          "cpu_total_us": 0,
+          "cpu_self_us": 0,
+          "device_total_us": 3853759.046,
+          "device_self_us": 3853759.046
+        },
+        {
+          "name": "blt::model",
+          "calls": 8,
+          "cpu_total_us": 455363.2699999998,
+          "cpu_self_us": 36282.26400000206,
+          "device_total_us": 157341.51000002038,
+          "device_self_us": 0.0
+        },
+        {
+          "name": "blt::model",
+          "calls": 8,
+          "cpu_total_us": 0,
+          "cpu_self_us": 0,
+          "device_total_us": 297970.4060000002,
+          "device_self_us": 297970.4060000002
+        },
+        {
+          "name": "blt::hash_embeddings",
+          "calls": 8,
+          "cpu_total_us": 23687.849999999686,
+          "cpu_self_us": 6224.532000001986,
+          "device_total_us": 1890.532999999181,
+          "device_self_us": 0.0
+        },
+        {
+          "name": "blt::hash_embeddings",
+          "calls": 8,
+          "cpu_total_us": 0,
+          "cpu_self_us": 0,
+          "device_total_us": 22739.359999999928,
+          "device_self_us": 22739.359999999928
+        },
+        {
+          "name": "blt::local_encoder",
+          "calls": 8,
+          "cpu_total_us": 21292.33699999994,
+          "cpu_self_us": 6924.133999994956,
+          "device_total_us": 7060.304000001983,
+          "device_self_us": 0.0
+        },
+        {
+          "name": "blt::local_encoder",
+          "calls": 8,
+          "cpu_total_us": 0,
+          "cpu_self_us": 0,
+          "device_total_us": 20707.17599999963,
+          "device_self_us": 20707.17599999963
+        },
+        {
+          "name": "blt::global_transformer",
+          "calls": 8,
+          "cpu_total_us": 211106.94199999963,
+          "cpu_self_us": 77405.42700000189,
+          "device_total_us": 111060.49400001275,
+          "device_self_us": 0.0
+        },
+        {
+          "name": "blt::global_transformer",
+          "calls": 8,
+          "cpu_total_us": 0,
+          "cpu_self_us": 0,
+          "device_total_us": 211397.13599999965,
+          "device_self_us": 211397.13599999965
+        },
+        {
+          "name": "blt::local_decoder",
+          "calls": 8,
+          "cpu_total_us": 132486.55600000056,
+          "cpu_self_us": 40859.364999999176,
+          "device_total_us": 34817.28700001037,
+          "device_self_us": 0.0
+        },
+        {
+          "name": "blt::local_decoder",
+          "calls": 8,
+          "cpu_total_us": 0,
+          "cpu_self_us": 0,
+          "device_total_us": 131822.1960000007,
+          "device_self_us": 131822.1960000007
+        },
+        {
+          "name": "blt::sampling_commit",
+          "calls": 8,
+          "cpu_total_us": 768.8880000006175,
+          "cpu_self_us": 321.82399999990594,
+          "device_total_us": 59.202000000630505,
+          "device_self_us": 0.0
+        },
+        {
+          "name": "blt::sampling_commit",
+          "calls": 8,
+          "cpu_total_us": 0,
+          "cpu_self_us": 0,
+          "device_total_us": 261.40900000021793,
+          "device_self_us": 261.40900000021793
+        },
+        {
+          "name": "blt::output_transfer",
+          "calls": 1,
+          "cpu_total_us": 93.72099999990314,
+          "cpu_self_us": 49.36500000022352,
+          "device_total_us": 2.0159999998286366,
+          "device_self_us": 0.0
+        },
+        {
+          "name": "blt::output_transfer",
+          "calls": 1,
+          "cpu_total_us": 0,
+          "cpu_self_us": 0,
+          "device_total_us": 2.0159999998286366,
+          "device_self_us": 2.0159999998286366
+        }
+      ]
+    },
+    {
+      "requested_context_bytes": 128,
+      "actual_context_bytes": 128,
+      "batch_size": 4,
+      "output_steps": 8,
+      "warmup": 2,
+      "samples": [
+        {
+          "elapsed_seconds": 16.095313960220665,
+          "raw_byte_count": 32,
+          "outputs": [
+            {
+              "steps": 8,
+              "raw_byte_count": 8,
+              "special_token_count": 0,
+              "valid_utf8": true,
+              "raw_hex": "2073746f70706564",
+              "display_text": " stopped"
+            },
+            {
+              "steps": 8,
+              "raw_byte_count": 8,
+              "special_token_count": 0,
+              "valid_utf8": true,
+              "raw_hex": "2073746f70706564",
+              "display_text": " stopped"
+            },
+            {
+              "steps": 8,
+              "raw_byte_count": 8,
+              "special_token_count": 0,
+              "valid_utf8": true,
+              "raw_hex": "2073746f70706564",
+              "display_text": " stopped"
+            },
+            {
+              "steps": 8,
+              "raw_byte_count": 8,
+              "special_token_count": 0,
+              "valid_utf8": true,
+              "raw_hex": "2073746f70706564",
+              "display_text": " stopped"
+            }
+          ],
+          "generated_ids": [
+            [
+              36,
+              119,
+              120,
+              115,
+              116,
+              116,
+              105,
+              104
+            ],
+            [
+              36,
+              119,
+              120,
+              115,
+              116,
+              116,
+              105,
+              104
+            ],
+            [
+              36,
+              119,
+              120,
+              115,
+              116,
+              116,
+              105,
+              104
+            ],
+            [
+              36,
+              119,
+              120,
+              115,
+              116,
+              116,
+              105,
+              104
+            ]
+          ]
+        },
+        {
+          "elapsed_seconds": 16.245254938025028,
+          "raw_byte_count": 32,
+          "outputs": [
+            {
+              "steps": 8,
+              "raw_byte_count": 8,
+              "special_token_count": 0,
+              "valid_utf8": true,
+              "raw_hex": "2073746f70706564",
+              "display_text": " stopped"
+            },
+            {
+              "steps": 8,
+              "raw_byte_count": 8,
+              "special_token_count": 0,
+              "valid_utf8": true,
+              "raw_hex": "2073746f70706564",
+              "display_text": " stopped"
+            },
+            {
+              "steps": 8,
+              "raw_byte_count": 8,
+              "special_token_count": 0,
+              "valid_utf8": true,
+              "raw_hex": "2073746f70706564",
+              "display_text": " stopped"
+            },
+            {
+              "steps": 8,
+              "raw_byte_count": 8,
+              "special_token_count": 0,
+              "valid_utf8": true,
+              "raw_hex": "2073746f70706564",
+              "display_text": " stopped"
+            }
+          ],
+          "generated_ids": [
+            [
+              36,
+              119,
+              120,
+              115,
+              116,
+              116,
+              105,
+              104
+            ],
+            [
+              36,
+              119,
+              120,
+              115,
+              116,
+              116,
+              105,
+              104
+            ],
+            [
+              36,
+              119,
+              120,
+              115,
+              116,
+              116,
+              105,
+              104
+            ],
+            [
+              36,
+              119,
+              120,
+              115,
+              116,
+              116,
+              105,
+              104
+            ]
+          ]
+        },
+        {
+          "elapsed_seconds": 16.359472292941064,
+          "raw_byte_count": 32,
+          "outputs": [
+            {
+              "steps": 8,
+              "raw_byte_count": 8,
+              "special_token_count": 0,
+              "valid_utf8": true,
+              "raw_hex": "2073746f70706564",
+              "display_text": " stopped"
+            },
+            {
+              "steps": 8,
+              "raw_byte_count": 8,
+              "special_token_count": 0,
+              "valid_utf8": true,
+              "raw_hex": "2073746f70706564",
+              "display_text": " stopped"
+            },
+            {
+              "steps": 8,
+              "raw_byte_count": 8,
+              "special_token_count": 0,
+              "valid_utf8": true,
+              "raw_hex": "2073746f70706564",
+              "display_text": " stopped"
+            },
+            {
+              "steps": 8,
+              "raw_byte_count": 8,
+              "special_token_count": 0,
+              "valid_utf8": true,
+              "raw_hex": "2073746f70706564",
+              "display_text": " stopped"
+            }
+          ],
+          "generated_ids": [
+            [
+              36,
+              119,
+              120,
+              115,
+              116,
+              116,
+              105,
+              104
+            ],
+            [
+              36,
+              119,
+              120,
+              115,
+              116,
+              116,
+              105,
+              104
+            ],
+            [
+              36,
+              119,
+              120,
+              115,
+              116,
+              116,
+              105,
+              104
+            ],
+            [
+              36,
+              119,
+              120,
+              115,
+              116,
+              116,
+              105,
+              104
+            ]
+          ]
+        },
+        {
+          "elapsed_seconds": 16.45391695993021,
+          "raw_byte_count": 32,
+          "outputs": [
+            {
+              "steps": 8,
+              "raw_byte_count": 8,
+              "special_token_count": 0,
+              "valid_utf8": true,
+              "raw_hex": "2073746f70706564",
+              "display_text": " stopped"
+            },
+            {
+              "steps": 8,
+              "raw_byte_count": 8,
+              "special_token_count": 0,
+              "valid_utf8": true,
+              "raw_hex": "2073746f70706564",
+              "display_text": " stopped"
+            },
+            {
+              "steps": 8,
+              "raw_byte_count": 8,
+              "special_token_count": 0,
+              "valid_utf8": true,
+              "raw_hex": "2073746f70706564",
+              "display_text": " stopped"
+            },
+            {
+              "steps": 8,
+              "raw_byte_count": 8,
+              "special_token_count": 0,
+              "valid_utf8": true,
+              "raw_hex": "2073746f70706564",
+              "display_text": " stopped"
+            }
+          ],
+          "generated_ids": [
+            [
+              36,
+              119,
+              120,
+              115,
+              116,
+              116,
+              105,
+              104
+            ],
+            [
+              36,
+              119,
+              120,
+              115,
+              116,
+              116,
+              105,
+              104
+            ],
+            [
+              36,
+              119,
+              120,
+              115,
+              116,
+              116,
+              105,
+              104
+            ],
+            [
+              36,
+              119,
+              120,
+              115,
+              116,
+              116,
+              105,
+              104
+            ]
+          ]
+        },
+        {
+          "elapsed_seconds": 16.54542860109359,
+          "raw_byte_count": 32,
+          "outputs": [
+            {
+              "steps": 8,
+              "raw_byte_count": 8,
+              "special_token_count": 0,
+              "valid_utf8": true,
+              "raw_hex": "2073746f70706564",
+              "display_text": " stopped"
+            },
+            {
+              "steps": 8,
+              "raw_byte_count": 8,
+              "special_token_count": 0,
+              "valid_utf8": true,
+              "raw_hex": "2073746f70706564",
+              "display_text": " stopped"
+            },
+            {
+              "steps": 8,
+              "raw_byte_count": 8,
+              "special_token_count": 0,
+              "valid_utf8": true,
+              "raw_hex": "2073746f70706564",
+              "display_text": " stopped"
+            },
+            {
+              "steps": 8,
+              "raw_byte_count": 8,
+              "special_token_count": 0,
+              "valid_utf8": true,
+              "raw_hex": "2073746f70706564",
+              "display_text": " stopped"
+            }
+          ],
+          "generated_ids": [
+            [
+              36,
+              119,
+              120,
+              115,
+              116,
+              116,
+              105,
+              104
+            ],
+            [
+              36,
+              119,
+              120,
+              115,
+              116,
+              116,
+              105,
+              104
+            ],
+            [
+              36,
+              119,
+              120,
+              115,
+              116,
+              116,
+              105,
+              104
+            ],
+            [
+              36,
+              119,
+              120,
+              115,
+              116,
+              116,
+              105,
+              104
+            ]
+          ]
+        }
+      ],
+      "summary": {
+        "samples": 5,
+        "raw_bytes_per_second_per_gpu": 1.9583990328504008,
+        "batch_latency_seconds_median": 16.359472292941064,
+        "batch_latency_seconds_p95": 16.527126272860915,
+        "batch_latency_seconds_min": 16.095313960220665,
+        "usd_per_million_raw_bytes": null,
+        "note": "Single-GPU closed-loop equal-length uncached batches; p95 is batch latency, not a serving SLO. Raw bytes may be invalid UTF-8."
+      },
+      "memory": {
+        "resident_allocated_bytes": 9512076288,
+        "peak_allocated_bytes": 9907042304,
+        "peak_reserved_bytes": 10101981184
+      },
+      "diagnostics": {
+        "model_forward_calls": 8,
+        "patcher_calls": 8,
+        "prefix_byte_or_bos_positions_reprocessed": 4240,
+        "patch_positions_including_next_slot": 672,
+        "note": "Uncached work summed across steps; not unique committed patches or per-layer NFEs."
+      },
+      "synchronized_diagnostic": {
+        "first_step_gpu_ready_seconds": 2.0736059113405645,
+        "inter_step_seconds": [
+          2.0738938180729747,
+          2.0756880077533424,
+          2.0749009759165347,
+          2.0790922632440925,
+          2.0787565568462014,
+          2.0789294010028243,
+          2.0832017259672284
+        ],
+        "note": "Separate synchronized pass; observer overhead included. Not network TTFT or production inter-output latency."
+      },
+      "profile_inclusive_ranges": [
+        {
+          "name": "blt::frontend",
+          "calls": 1,
+          "cpu_total_us": 1545.63,
+          "cpu_self_us": 234.38500000000022,
+          "device_total_us": 4.3840000000000146,
+          "device_self_us": 0.0
+        },
+        {
+          "name": "blt::frontend",
+          "calls": 1,
+          "cpu_total_us": 0,
+          "cpu_self_us": 0,
+          "device_total_us": 66.01599999999985,
+          "device_self_us": 66.01599999999985
+        },
+        {
+          "name": "blt::patcher",
+          "calls": 8,
+          "cpu_total_us": 16392649.479999997,
+          "cpu_self_us": 19284.966000001645,
+          "device_total_us": 16309873.75499996,
+          "device_self_us": 0.0
+        },
+        {
+          "name": "blt::patcher",
+          "calls": 8,
+          "cpu_total_us": 0,
+          "cpu_self_us": 0,
+          "device_total_us": 16391455.873,
+          "device_self_us": 16391455.873
+        },
+        {
+          "name": "blt::entropy_model",
+          "calls": 32,
+          "cpu_total_us": 479629.0579999985,
+          "cpu_self_us": 180594.54600003065,
+          "device_total_us": 16303223.837999968,
+          "device_self_us": 0.0
+        },
+        {
+          "name": "blt::entropy_model",
+          "calls": 32,
+          "cpu_total_us": 0,
+          "cpu_self_us": 0,
+          "device_total_us": 16325687.719999999,
+          "device_self_us": 16325687.719999999
+        },
+        {
+          "name": "blt::model",
+          "calls": 8,
+          "cpu_total_us": 483880.22999999905,
+          "cpu_self_us": 37192.17400000291,
+          "device_total_us": 246293.35699995584,
+          "device_self_us": 0.0
+        },
+        {
+          "name": "blt::model",
+          "calls": 8,
+          "cpu_total_us": 0,
+          "cpu_self_us": 0,
+          "device_total_us": 321303.47800000245,
+          "device_self_us": 321303.47800000245
+        },
+        {
+          "name": "blt::hash_embeddings",
+          "calls": 8,
+          "cpu_total_us": 24963.421000004746,
+          "cpu_self_us": 6521.316000013147,
+          "device_total_us": 2385.8500000089407,
+          "device_self_us": 0.0
+        },
+        {
+          "name": "blt::hash_embeddings",
+          "calls": 8,
+          "cpu_total_us": 0,
+          "cpu_self_us": 0,
+          "device_total_us": 24231.38300000201,
+          "device_self_us": 24231.38300000201
+        },
+        {
+          "name": "blt::local_encoder",
+          "calls": 8,
+          "cpu_total_us": 22855.041999997804,
+          "cpu_self_us": 7133.194999991683,
+          "device_total_us": 13999.68700000015,
+          "device_self_us": 0.0
+        },
+        {
+          "name": "blt::local_encoder",
+          "calls": 8,
+          "cpu_total_us": 0,
+          "cpu_self_us": 0,
+          "device_total_us": 23081.088000002317,
+          "device_self_us": 23081.088000002317
+        },
+        {
+          "name": "blt::global_transformer",
+          "calls": 8,
+          "cpu_total_us": 229487.14099999866,
+          "cpu_self_us": 80384.54299999471,
+          "device_total_us": 143766.9530000044,
+          "device_self_us": 0.0
+        },
+        {
+          "name": "blt::global_transformer",
+          "calls": 8,
+          "cpu_total_us": 0,
+          "cpu_self_us": 0,
+          "device_total_us": 230340.37100000097,
+          "device_self_us": 230340.37100000097
+        },
+        {
+          "name": "blt::local_decoder",
+          "calls": 8,
+          "cpu_total_us": 136382.99899999704,
+          "cpu_self_us": 41784.24900005269,
+          "device_total_us": 83272.87199998344,
+          "device_self_us": 0.0
+        },
+        {
+          "name": "blt::local_decoder",
+          "calls": 8,
+          "cpu_total_us": 0,
+          "cpu_self_us": 0,
+          "device_total_us": 136200.77399999788,
+          "device_self_us": 136200.77399999788
+        },
+        {
+          "name": "blt::sampling_commit",
+          "calls": 8,
+          "cpu_total_us": 750.8730000006035,
+          "cpu_self_us": 330.50900000473484,
+          "device_total_us": 70.11200000019744,
+          "device_self_us": 0.0
+        },
+        {
+          "name": "blt::sampling_commit",
+          "calls": 8,
+          "cpu_total_us": 0,
+          "cpu_self_us": 0,
+          "device_total_us": 240.09399999910966,
+          "device_self_us": 240.09399999910966
+        },
+        {
+          "name": "blt::output_transfer",
+          "calls": 1,
+          "cpu_total_us": 154.91999999806285,
+          "cpu_self_us": 60.717000003904104,
+          "device_total_us": 3.519999995827675,
+          "device_self_us": 0.0
+        },
+        {
+          "name": "blt::output_transfer",
+          "calls": 1,
+          "cpu_total_us": 0,
+          "cpu_self_us": 0,
+          "device_total_us": 22.527999997138977,
+          "device_self_us": 22.527999997138977
+        }
+      ]
+    },
+    {
+      "requested_context_bytes": 512,
+      "actual_context_bytes": 512,
+      "batch_size": 1,
+      "output_steps": 8,
+      "warmup": 2,
+      "samples": [
+        {
+          "elapsed_seconds": 4.286404028069228,
+          "raw_byte_count": 8,
+          "outputs": [
+            {
+              "steps": 8,
+              "raw_byte_count": 8,
+              "special_token_count": 0,
+              "valid_utf8": true,
+              "raw_hex": "65207261696e2073",
+              "display_text": "e rain s"
+            }
+          ],
+          "generated_ids": [
+            [
+              105,
+              36,
+              118,
+              101,
+              109,
+              114,
+              36,
+              119
+            ]
+          ]
+        },
+        {
+          "elapsed_seconds": 4.297294509131461,
+          "raw_byte_count": 8,
+          "outputs": [
+            {
+              "steps": 8,
+              "raw_byte_count": 8,
+              "special_token_count": 0,
+              "valid_utf8": true,
+              "raw_hex": "65207261696e2073",
+              "display_text": "e rain s"
+            }
+          ],
+          "generated_ids": [
+            [
+              105,
+              36,
+              118,
+              101,
+              109,
+              114,
+              36,
+              119
+            ]
+          ]
+        },
+        {
+          "elapsed_seconds": 4.311930157709867,
+          "raw_byte_count": 8,
+          "outputs": [
+            {
+              "steps": 8,
+              "raw_byte_count": 8,
+              "special_token_count": 0,
+              "valid_utf8": true,
+              "raw_hex": "65207261696e2073",
+              "display_text": "e rain s"
+            }
+          ],
+          "generated_ids": [
+            [
+              105,
+              36,
+              118,
+              101,
+              109,
+              114,
+              36,
+              119
+            ]
+          ]
+        },
+        {
+          "elapsed_seconds": 4.3180506974458694,
+          "raw_byte_count": 8,
+          "outputs": [
+            {
+              "steps": 8,
+              "raw_byte_count": 8,
+              "special_token_count": 0,
+              "valid_utf8": true,
+              "raw_hex": "65207261696e2073",
+              "display_text": "e rain s"
+            }
+          ],
+          "generated_ids": [
+            [
+              105,
+              36,
+              118,
+              101,
+              109,
+              114,
+              36,
+              119
+            ]
+          ]
+        },
+        {
+          "elapsed_seconds": 4.328582329209894,
+          "raw_byte_count": 8,
+          "outputs": [
+            {
+              "steps": 8,
+              "raw_byte_count": 8,
+              "special_token_count": 0,
+              "valid_utf8": true,
+              "raw_hex": "65207261696e2073",
+              "display_text": "e rain s"
+            }
+          ],
+          "generated_ids": [
+            [
+              105,
+              36,
+              118,
+              101,
+              109,
+              114,
+              36,
+              119
+            ]
+          ]
+        }
+      ],
+      "summary": {
+        "samples": 5,
+        "raw_bytes_per_second_per_gpu": 1.8568152460962504,
+        "batch_latency_seconds_median": 4.311930157709867,
+        "batch_latency_seconds_p95": 4.326476002857089,
+        "batch_latency_seconds_min": 4.286404028069228,
+        "usd_per_million_raw_bytes": null,
+        "note": "Single-GPU closed-loop equal-length uncached batches; p95 is batch latency, not a serving SLO. Raw bytes may be invalid UTF-8."
+      },
+      "memory": {
+        "resident_allocated_bytes": 9512076288,
+        "peak_allocated_bytes": 9907013120,
+        "peak_reserved_bytes": 10101981184
+      },
+      "diagnostics": {
+        "model_forward_calls": 8,
+        "patcher_calls": 8,
+        "prefix_byte_or_bos_positions_reprocessed": 4132,
+        "patch_positions_including_next_slot": 168,
+        "note": "Uncached work summed across steps; not unique committed patches or per-layer NFEs."
+      },
+      "synchronized_diagnostic": {
+        "first_step_gpu_ready_seconds": 0.5417061140760779,
+        "inter_step_seconds": [
+          0.5408100909553468,
+          0.5438438202254474,
+          0.5422229538671672,
+          0.5438365451991558,
+          0.5425199386663735,
+          0.5418188022449613,
+          0.5427724067121744
+        ],
+        "note": "Separate synchronized pass; observer overhead included. Not network TTFT or production inter-output latency."
+      },
+      "profile_inclusive_ranges": [
+        {
+          "name": "blt::frontend",
+          "calls": 1,
+          "cpu_total_us": 634.227,
+          "cpu_self_us": 237.8520000000001,
+          "device_total_us": 3.4879999999999427,
+          "device_self_us": 0.0
+        },
+        {
+          "name": "blt::frontend",
+          "calls": 1,
+          "cpu_total_us": 0,
+          "cpu_self_us": 0,
+          "device_total_us": 69.02300000000002,
+          "device_self_us": 69.02300000000002
+        },
+        {
+          "name": "blt::patcher",
+          "calls": 8,
+          "cpu_total_us": 4017435.867,
+          "cpu_self_us": 4775.547999996052,
+          "device_total_us": 3996443.4910000036,
+          "device_self_us": 0.0
+        },
+        {
+          "name": "blt::patcher",
+          "calls": 8,
+          "cpu_total_us": 0,
+          "cpu_self_us": 0,
+          "device_total_us": 4016344.3380000005,
+          "device_self_us": 4016344.3380000005
+        },
+        {
+          "name": "blt::entropy_model",
+          "calls": 8,
+          "cpu_total_us": 118078.76500000052,
+          "cpu_self_us": 45165.03200000755,
+          "device_total_us": 3994729.9780000034,
+          "device_self_us": 0.0
+        },
+        {
+          "name": "blt::entropy_model",
+          "calls": 8,
+          "cpu_total_us": 0,
+          "cpu_self_us": 0,
+          "device_total_us": 4000776.8369999994,
+          "device_self_us": 4000776.8369999994
+        },
+        {
+          "name": "blt::model",
+          "calls": 8,
+          "cpu_total_us": 456388.905,
+          "cpu_self_us": 36071.20500000543,
+          "device_total_us": 211477.4200000083,
+          "device_self_us": 0.0
+        },
+        {
+          "name": "blt::model",
+          "calls": 8,
+          "cpu_total_us": 0,
+          "cpu_self_us": 0,
+          "device_total_us": 299328.72199999937,
+          "device_self_us": 299328.72199999937
+        },
+        {
+          "name": "blt::hash_embeddings",
+          "calls": 8,
+          "cpu_total_us": 23974.747999999614,
+          "cpu_self_us": 6386.554999996268,
+          "device_total_us": 2307.730999993917,
+          "device_self_us": 0.0
+        },
+        {
+          "name": "blt::hash_embeddings",
+          "calls": 8,
+          "cpu_total_us": 0,
+          "cpu_self_us": 0,
+          "device_total_us": 23078.428000000422,
+          "device_self_us": 23078.428000000422
+        },
+        {
+          "name": "blt::local_encoder",
+          "calls": 8,
+          "cpu_total_us": 21369.52699999942,
+          "cpu_self_us": 6878.660999996937,
+          "device_total_us": 14693.039999996428,
+          "device_self_us": 0.0
+        },
+        {
+          "name": "blt::local_encoder",
+          "calls": 8,
+          "cpu_total_us": 0,
+          "cpu_self_us": 0,
+          "device_total_us": 21556.355999999738,
+          "device_self_us": 21556.355999999738
+        },
+        {
+          "name": "blt::global_transformer",
+          "calls": 8,
+          "cpu_total_us": 212254.97599999933,
+          "cpu_self_us": 78142.5849999779,
+          "device_total_us": 113337.91800000396,
+          "device_self_us": 0.0
+        },
+        {
+          "name": "blt::global_transformer",
+          "calls": 8,
+          "cpu_total_us": 0,
+          "cpu_self_us": 0,
+          "device_total_us": 212500.3239999998,
+          "device_self_us": 212500.3239999998
+        },
+        {
+          "name": "blt::local_decoder",
+          "calls": 8,
+          "cpu_total_us": 132092.53199999977,
+          "cpu_self_us": 41240.489000006346,
+          "device_total_us": 78475.77799999656,
+          "device_self_us": 0.0
+        },
+        {
+          "name": "blt::local_decoder",
+          "calls": 8,
+          "cpu_total_us": 0,
+          "cpu_self_us": 0,
+          "device_total_us": 131810.7920000007,
+          "device_self_us": 131810.7920000007
+        },
+        {
+          "name": "blt::sampling_commit",
+          "calls": 8,
+          "cpu_total_us": 832.2710000006482,
+          "cpu_self_us": 351.4930000016466,
+          "device_total_us": 59.19900000083726,
+          "device_self_us": 0.0
+        },
+        {
+          "name": "blt::sampling_commit",
+          "calls": 8,
+          "cpu_total_us": 0,
+          "cpu_self_us": 0,
+          "device_total_us": 288.19000000029337,
+          "device_self_us": 288.19000000029337
+        },
+        {
+          "name": "blt::output_transfer",
+          "calls": 1,
+          "cpu_total_us": 95.49500000011176,
+          "cpu_self_us": 49.083999999798834,
+          "device_total_us": 1.7279999991878867,
+          "device_self_us": 0.0
+        },
+        {
+          "name": "blt::output_transfer",
+          "calls": 1,
+          "cpu_total_us": 0,
+          "cpu_self_us": 0,
+          "device_total_us": 1.7279999991878867,
+          "device_self_us": 1.7279999991878867
+        }
+      ]
+    },
+    {
+      "requested_context_bytes": 512,
+      "actual_context_bytes": 512,
+      "batch_size": 4,
+      "output_steps": 8,
+      "warmup": 2,
+      "samples": [
+        {
+          "elapsed_seconds": 16.983590964227915,
+          "raw_byte_count": 32,
+          "outputs": [
+            {
+              "steps": 8,
+              "raw_byte_count": 8,
+              "special_token_count": 0,
+              "valid_utf8": true,
+              "raw_hex": "65207261696e2073",
+              "display_text": "e rain s"
+            },
+            {
+              "steps": 8,
+              "raw_byte_count": 8,
+              "special_token_count": 0,
+              "valid_utf8": true,
+              "raw_hex": "65207261696e2073",
+              "display_text": "e rain s"
+            },
+            {
+              "steps": 8,
+              "raw_byte_count": 8,
+              "special_token_count": 0,
+              "valid_utf8": true,
+              "raw_hex": "65207261696e2073",
+              "display_text": "e rain s"
+            },
+            {
+              "steps": 8,
+              "raw_byte_count": 8,
+              "special_token_count": 0,
+              "valid_utf8": true,
+              "raw_hex": "65207261696e2073",
+              "display_text": "e rain s"
+            }
+          ],
+          "generated_ids": [
+            [
+              105,
+              36,
+              118,
+              101,
+              109,
+              114,
+              36,
+              119
+            ],
+            [
+              105,
+              36,
+              118,
+              101,
+              109,
+              114,
+              36,
+              119
+            ],
+            [
+              105,
+              36,
+              118,
+              101,
+              109,
+              114,
+              36,
+              119
+            ],
+            [
+              105,
+              36,
+              118,
+              101,
+              109,
+              114,
+              36,
+              119
+            ]
+          ]
+        },
+        {
+          "elapsed_seconds": 17.131426414940506,
+          "raw_byte_count": 32,
+          "outputs": [
+            {
+              "steps": 8,
+              "raw_byte_count": 8,
+              "special_token_count": 0,
+              "valid_utf8": true,
+              "raw_hex": "65207261696e2073",
+              "display_text": "e rain s"
+            },
+            {
+              "steps": 8,
+              "raw_byte_count": 8,
+              "special_token_count": 0,
+              "valid_utf8": true,
+              "raw_hex": "65207261696e2073",
+              "display_text": "e rain s"
+            },
+            {
+              "steps": 8,
+              "raw_byte_count": 8,
+              "special_token_count": 0,
+              "valid_utf8": true,
+              "raw_hex": "65207261696e2073",
+              "display_text": "e rain s"
+            },
+            {
+              "steps": 8,
+              "raw_byte_count": 8,
+              "special_token_count": 0,
+              "valid_utf8": true,
+              "raw_hex": "65207261696e2073",
+              "display_text": "e rain s"
+            }
+          ],
+          "generated_ids": [
+            [
+              105,
+              36,
+              118,
+              101,
+              109,
+              114,
+              36,
+              119
+            ],
+            [
+              105,
+              36,
+              118,
+              101,
+              109,
+              114,
+              36,
+              119
+            ],
+            [
+              105,
+              36,
+              118,
+              101,
+              109,
+              114,
+              36,
+              119
+            ],
+            [
+              105,
+              36,
+              118,
+              101,
+              109,
+              114,
+              36,
+              119
+            ]
+          ]
+        },
+        {
+          "elapsed_seconds": 17.244099891278893,
+          "raw_byte_count": 32,
+          "outputs": [
+            {
+              "steps": 8,
+              "raw_byte_count": 8,
+              "special_token_count": 0,
+              "valid_utf8": true,
+              "raw_hex": "65207261696e2073",
+              "display_text": "e rain s"
+            },
+            {
+              "steps": 8,
+              "raw_byte_count": 8,
+              "special_token_count": 0,
+              "valid_utf8": true,
+              "raw_hex": "65207261696e2073",
+              "display_text": "e rain s"
+            },
+            {
+              "steps": 8,
+              "raw_byte_count": 8,
+              "special_token_count": 0,
+              "valid_utf8": true,
+              "raw_hex": "65207261696e2073",
+              "display_text": "e rain s"
+            },
+            {
+              "steps": 8,
+              "raw_byte_count": 8,
+              "special_token_count": 0,
+              "valid_utf8": true,
+              "raw_hex": "65207261696e2073",
+              "display_text": "e rain s"
+            }
+          ],
+          "generated_ids": [
+            [
+              105,
+              36,
+              118,
+              101,
+              109,
+              114,
+              36,
+              119
+            ],
+            [
+              105,
+              36,
+              118,
+              101,
+              109,
+              114,
+              36,
+              119
+            ],
+            [
+              105,
+              36,
+              118,
+              101,
+              109,
+              114,
+              36,
+              119
+            ],
+            [
+              105,
+              36,
+              118,
+              101,
+              109,
+              114,
+              36,
+              119
+            ]
+          ]
+        },
+        {
+          "elapsed_seconds": 17.332777014933527,
+          "raw_byte_count": 32,
+          "outputs": [
+            {
+              "steps": 8,
+              "raw_byte_count": 8,
+              "special_token_count": 0,
+              "valid_utf8": true,
+              "raw_hex": "65207261696e2073",
+              "display_text": "e rain s"
+            },
+            {
+              "steps": 8,
+              "raw_byte_count": 8,
+              "special_token_count": 0,
+              "valid_utf8": true,
+              "raw_hex": "65207261696e2073",
+              "display_text": "e rain s"
+            },
+            {
+              "steps": 8,
+              "raw_byte_count": 8,
+              "special_token_count": 0,
+              "valid_utf8": true,
+              "raw_hex": "65207261696e2073",
+              "display_text": "e rain s"
+            },
+            {
+              "steps": 8,
+              "raw_byte_count": 8,
+              "special_token_count": 0,
+              "valid_utf8": true,
+              "raw_hex": "65207261696e2073",
+              "display_text": "e rain s"
+            }
+          ],
+          "generated_ids": [
+            [
+              105,
+              36,
+              118,
+              101,
+              109,
+              114,
+              36,
+              119
+            ],
+            [
+              105,
+              36,
+              118,
+              101,
+              109,
+              114,
+              36,
+              119
+            ],
+            [
+              105,
+              36,
+              118,
+              101,
+              109,
+              114,
+              36,
+              119
+            ],
+            [
+              105,
+              36,
+              118,
+              101,
+              109,
+              114,
+              36,
+              119
+            ]
+          ]
+        },
+        {
+          "elapsed_seconds": 17.374243263155222,
+          "raw_byte_count": 32,
+          "outputs": [
+            {
+              "steps": 8,
+              "raw_byte_count": 8,
+              "special_token_count": 0,
+              "valid_utf8": true,
+              "raw_hex": "65207261696e2073",
+              "display_text": "e rain s"
+            },
+            {
+              "steps": 8,
+              "raw_byte_count": 8,
+              "special_token_count": 0,
+              "valid_utf8": true,
+              "raw_hex": "65207261696e2073",
+              "display_text": "e rain s"
+            },
+            {
+              "steps": 8,
+              "raw_byte_count": 8,
+              "special_token_count": 0,
+              "valid_utf8": true,
+              "raw_hex": "65207261696e2073",
+              "display_text": "e rain s"
+            },
+            {
+              "steps": 8,
+              "raw_byte_count": 8,
+              "special_token_count": 0,
+              "valid_utf8": true,
+              "raw_hex": "65207261696e2073",
+              "display_text": "e rain s"
+            }
+          ],
+          "generated_ids": [
+            [
+              105,
+              36,
+              118,
+              101,
+              109,
+              114,
+              36,
+              119
+            ],
+            [
+              105,
+              36,
+              118,
+              101,
+              109,
+              114,
+              36,
+              119
+            ],
+            [
+              105,
+              36,
+              118,
+              101,
+              109,
+              114,
+              36,
+              119
+            ],
+            [
+              105,
+              36,
+              118,
+              101,
+              109,
+              114,
+              36,
+              119
+            ]
+          ]
+        }
+      ],
+      "summary": {
+        "samples": 5,
+        "raw_bytes_per_second_per_gpu": 1.8590354413170886,
+        "batch_latency_seconds_median": 17.244099891278893,
+        "batch_latency_seconds_p95": 17.365950013510883,
+        "batch_latency_seconds_min": 16.983590964227915,
+        "usd_per_million_raw_bytes": null,
+        "note": "Single-GPU closed-loop equal-length uncached batches; p95 is batch latency, not a serving SLO. Raw bytes may be invalid UTF-8."
+      },
+      "memory": {
+        "resident_allocated_bytes": 9512076288,
+        "peak_allocated_bytes": 9908653568,
+        "peak_reserved_bytes": 10101981184
+      },
+      "diagnostics": {
+        "model_forward_calls": 8,
+        "patcher_calls": 8,
+        "prefix_byte_or_bos_positions_reprocessed": 16528,
+        "patch_positions_including_next_slot": 672,
+        "note": "Uncached work summed across steps; not unique committed patches or per-layer NFEs."
+      },
+      "synchronized_diagnostic": {
+        "first_step_gpu_ready_seconds": 2.1729339198209345,
+        "inter_step_seconds": [
+          2.1705975481308997,
+          2.171828157734126,
+          2.1748545342125,
+          2.1728222998790443,
+          2.178169713355601,
+          2.1710078795440495,
+          2.176314219366759
+        ],
+        "note": "Separate synchronized pass; observer overhead included. Not network TTFT or production inter-output latency."
+      },
+      "profile_inclusive_ranges": [
+        {
+          "name": "blt::frontend",
+          "calls": 1,
+          "cpu_total_us": 1355.1619999999998,
+          "cpu_self_us": 566.6359999999997,
+          "device_total_us": 9.983999999999696,
+          "device_self_us": 0.0
+        },
+        {
+          "name": "blt::frontend",
+          "calls": 1,
+          "cpu_total_us": 0,
+          "cpu_self_us": 0,
+          "device_total_us": 84.12699999999995,
+          "device_self_us": 84.12699999999995
+        },
+        {
+          "name": "blt::patcher",
+          "calls": 8,
+          "cpu_total_us": 16995025.478,
+          "cpu_self_us": 18579.194999999367,
+          "device_total_us": 16767422.629999997,
+          "device_self_us": 0.0
+        },
+        {
+          "name": "blt::patcher",
+          "calls": 8,
+          "cpu_total_us": 0,
+          "cpu_self_us": 0,
+          "device_total_us": 16847093.589,
+          "device_self_us": 16847093.589
+        },
+        {
+          "name": "blt::entropy_model",
+          "calls": 32,
+          "cpu_total_us": 615399.3479999946,
+          "cpu_self_us": 177489.28100002938,
+          "device_total_us": 16760118.759000018,
+          "device_self_us": 0.0
+        },
+        {
+          "name": "blt::entropy_model",
+          "calls": 32,
+          "cpu_total_us": 0,
+          "cpu_self_us": 0,
+          "device_total_us": 16783627.974000003,
+          "device_self_us": 16783627.974000003
+        },
+        {
+          "name": "blt::model",
+          "calls": 8,
+          "cpu_total_us": 503903.82500000065,
+          "cpu_self_us": 36493.82800001092,
+          "device_total_us": 496270.0890001105,
+          "device_self_us": 0.0
+        },
+        {
+          "name": "blt::model",
+          "calls": 8,
+          "cpu_total_us": 0,
+          "cpu_self_us": 0,
+          "device_total_us": 342786.9390000007,
+          "device_self_us": 342786.9390000007
+        },
+        {
+          "name": "blt::hash_embeddings",
+          "calls": 8,
+          "cpu_total_us": 24538.073999999557,
+          "cpu_self_us": 6417.543000006117,
+          "device_total_us": 5063.602000019979,
+          "device_self_us": 0.0
+        },
+        {
+          "name": "blt::hash_embeddings",
+          "calls": 8,
+          "cpu_total_us": 0,
+          "cpu_self_us": 0,
+          "device_total_us": 24110.094999996014,
+          "device_self_us": 24110.094999996014
+        },
+        {
+          "name": "blt::local_encoder",
+          "calls": 8,
+          "cpu_total_us": 22516.6119999988,
+          "cpu_self_us": 7170.979000007734,
+          "device_total_us": 47776.10500001209,
+          "device_self_us": 0.0
+        },
+        {
+          "name": "blt::local_encoder",
+          "calls": 8,
+          "cpu_total_us": 0,
+          "cpu_self_us": 0,
+          "device_total_us": 52755.96800000267,
+          "device_self_us": 52755.96800000267
+        },
+        {
+          "name": "blt::global_transformer",
+          "calls": 8,
+          "cpu_total_us": 222266.35199999856,
+          "cpu_self_us": 78952.64299990749,
+          "device_total_us": 144155.05100004934,
+          "device_self_us": 0.0
+        },
+        {
+          "name": "blt::global_transformer",
+          "calls": 8,
+          "cpu_total_us": 0,
+          "cpu_self_us": 0,
+          "device_total_us": 223238.75699999975,
+          "device_self_us": 223238.75699999975
+        },
+        {
+          "name": "blt::local_decoder",
+          "calls": 8,
+          "cpu_total_us": 135350.37600000203,
+          "cpu_self_us": 41589.00699992431,
+          "device_total_us": 296233.6620000168,
+          "device_self_us": 0.0
+        },
+        {
+          "name": "blt::local_decoder",
+          "calls": 8,
+          "cpu_total_us": 0,
+          "cpu_self_us": 0,
+          "device_total_us": 305481.2900000033,
+          "device_self_us": 305481.2900000033
+        },
+        {
+          "name": "blt::sampling_commit",
+          "calls": 8,
+          "cpu_total_us": 774.5090000005439,
+          "cpu_self_us": 349.6779999989085,
+          "device_total_us": 83.55299999844283,
+          "device_self_us": 0.0
+        },
+        {
+          "name": "blt::sampling_commit",
+          "calls": 8,
+          "cpu_total_us": 0,
+          "cpu_self_us": 0,
+          "device_total_us": 91.23199999844655,
+          "device_self_us": 91.23199999844655
+        },
+        {
+          "name": "blt::output_transfer",
+          "calls": 1,
+          "cpu_total_us": 21418.890000000596,
+          "cpu_self_us": 63.83399999886751,
+          "device_total_us": 4.0,
+          "device_self_us": 0.0
+        },
+        {
+          "name": "blt::output_transfer",
+          "calls": 1,
+          "cpu_total_us": 0,
+          "cpu_self_us": 0,
+          "device_total_us": 12.320000000298023,
+          "device_self_us": 12.320000000298023
+        }
+      ]
+    },
+    {
+      "requested_context_bytes": 2048,
+      "actual_context_bytes": 2048,
+      "batch_size": 1,
+      "output_steps": 8,
+      "warmup": 2,
+      "samples": [
+        {
+          "elapsed_seconds": 4.66129874298349,
+          "raw_byte_count": 8,
+          "outputs": [
+            {
+              "steps": 8,
+              "raw_byte_count": 8,
+              "special_token_count": 0,
+              "valid_utf8": true,
+              "raw_hex": "2073746f70706564",
+              "display_text": " stopped"
+            }
+          ],
+          "generated_ids": [
+            [
+              36,
+              119,
+              120,
+              115,
+              116,
+              116,
+              105,
+              104
+            ]
+          ]
+        },
+        {
+          "elapsed_seconds": 4.6846231408417225,
+          "raw_byte_count": 8,
+          "outputs": [
+            {
+              "steps": 8,
+              "raw_byte_count": 8,
+              "special_token_count": 0,
+              "valid_utf8": true,
+              "raw_hex": "2073746f70706564",
+              "display_text": " stopped"
+            }
+          ],
+          "generated_ids": [
+            [
+              36,
+              119,
+              120,
+              115,
+              116,
+              116,
+              105,
+              104
+            ]
+          ]
+        },
+        {
+          "elapsed_seconds": 4.707863214891404,
+          "raw_byte_count": 8,
+          "outputs": [
+            {
+              "steps": 8,
+              "raw_byte_count": 8,
+              "special_token_count": 0,
+              "valid_utf8": true,
+              "raw_hex": "2073746f70706564",
+              "display_text": " stopped"
+            }
+          ],
+          "generated_ids": [
+            [
+              36,
+              119,
+              120,
+              115,
+              116,
+              116,
+              105,
+              104
+            ]
+          ]
+        },
+        {
+          "elapsed_seconds": 4.724504882935435,
+          "raw_byte_count": 8,
+          "outputs": [
+            {
+              "steps": 8,
+              "raw_byte_count": 8,
+              "special_token_count": 0,
+              "valid_utf8": true,
+              "raw_hex": "2073746f70706564",
+              "display_text": " stopped"
+            }
+          ],
+          "generated_ids": [
+            [
+              36,
+              119,
+              120,
+              115,
+              116,
+              116,
+              105,
+              104
+            ]
+          ]
+        },
+        {
+          "elapsed_seconds": 4.739454297814518,
+          "raw_byte_count": 8,
+          "outputs": [
+            {
+              "steps": 8,
+              "raw_byte_count": 8,
+              "special_token_count": 0,
+              "valid_utf8": true,
+              "raw_hex": "2073746f70706564",
+              "display_text": " stopped"
+            }
+          ],
+          "generated_ids": [
+            [
+              36,
+              119,
+              120,
+              115,
+              116,
+              116,
+              105,
+              104
+            ]
+          ]
+        }
+      ],
+      "summary": {
+        "samples": 5,
+        "raw_bytes_per_second_per_gpu": 1.7008433940207501,
+        "batch_latency_seconds_median": 4.707863214891404,
+        "batch_latency_seconds_p95": 4.736464414838702,
+        "batch_latency_seconds_min": 4.66129874298349,
+        "usd_per_million_raw_bytes": null,
+        "note": "Single-GPU closed-loop equal-length uncached batches; p95 is batch latency, not a serving SLO. Raw bytes may be invalid UTF-8."
+      },
+      "memory": {
+        "resident_allocated_bytes": 9512076288,
+        "peak_allocated_bytes": 9908610560,
+        "peak_reserved_bytes": 10101981184
+      },
+      "diagnostics": {
+        "model_forward_calls": 8,
+        "patcher_calls": 8,
+        "prefix_byte_or_bos_positions_reprocessed": 16420,
+        "patch_positions_including_next_slot": 168,
+        "note": "Uncached work summed across steps; not unique committed patches or per-layer NFEs."
+      },
+      "synchronized_diagnostic": {
+        "first_step_gpu_ready_seconds": 0.5954518020153046,
+        "inter_step_seconds": [
+          0.5928753591142595,
+          0.5943058161064982,
+          0.5962214707396924,
+          0.5960329761728644,
+          0.5948331761173904,
+          0.5967039838433266,
+          0.5952189122326672
+        ],
+        "note": "Separate synchronized pass; observer overhead included. Not network TTFT or production inter-output latency."
+      },
+      "profile_inclusive_ranges": [
+        {
+          "name": "blt::frontend",
+          "calls": 1,
+          "cpu_total_us": 1270.858,
+          "cpu_self_us": 535.2739999999997,
+          "device_total_us": 8.6700000000003,
+          "device_self_us": 0.0
+        },
+        {
+          "name": "blt::frontend",
+          "calls": 1,
+          "cpu_total_us": 0,
+          "cpu_self_us": 0,
+          "device_total_us": 73.53500000000008,
+          "device_self_us": 73.53500000000008
+        },
+        {
+          "name": "blt::patcher",
+          "calls": 8,
+          "cpu_total_us": 4354113.968,
+          "cpu_self_us": 4832.838999999629,
+          "device_total_us": 4192411.7629999924,
+          "device_self_us": 0.0
+        },
+        {
+          "name": "blt::patcher",
+          "calls": 8,
+          "cpu_total_us": 0,
+          "cpu_self_us": 0,
+          "device_total_us": 4211167.379000001,
+          "device_self_us": 4211167.379000001
+        },
+        {
+          "name": "blt::entropy_model",
+          "calls": 8,
+          "cpu_total_us": 258909.4020000002,
+          "cpu_self_us": 45333.71600000087,
+          "device_total_us": 4190307.105999994,
+          "device_self_us": 0.0
+        },
+        {
+          "name": "blt::entropy_model",
+          "calls": 8,
+          "cpu_total_us": 0,
+          "cpu_self_us": 0,
+          "device_total_us": 4196353.917,
+          "device_self_us": 4196353.917
+        },
+        {
+          "name": "blt::model",
+          "calls": 8,
+          "cpu_total_us": 485483.43800000026,
+          "cpu_self_us": 35867.52199999668,
+          "device_total_us": 456744.9340000061,
+          "device_self_us": 0.0
+        },
+        {
+          "name": "blt::model",
+          "calls": 8,
+          "cpu_total_us": 0,
+          "cpu_self_us": 0,
+          "device_total_us": 327460.73499999923,
+          "device_self_us": 327460.73499999923
+        },
+        {
+          "name": "blt::hash_embeddings",
+          "calls": 8,
+          "cpu_total_us": 23857.124999999884,
+          "cpu_self_us": 6341.052000008174,
+          "device_total_us": 4947.246999999043,
+          "device_self_us": 0.0
+        },
+        {
+          "name": "blt::hash_embeddings",
+          "calls": 8,
+          "cpu_total_us": 0,
+          "cpu_self_us": 0,
+          "device_total_us": 23293.111999999965,
+          "device_self_us": 23293.111999999965
+        },
+        {
+          "name": "blt::local_encoder",
+          "calls": 8,
+          "cpu_total_us": 21154.16899999883,
+          "cpu_self_us": 6826.235000001499,
+          "device_total_us": 46713.29799999599,
+          "device_self_us": 0.0
+        },
+        {
+          "name": "blt::local_encoder",
+          "calls": 8,
+          "cpu_total_us": 0,
+          "cpu_self_us": 0,
+          "device_total_us": 50936.3060000001,
+          "device_self_us": 50936.3060000001
+        },
+        {
+          "name": "blt::global_transformer",
+          "calls": 8,
+          "cpu_total_us": 211464.3509999998,
+          "cpu_self_us": 77971.75800001656,
+          "device_total_us": 114338.28400002117,
+          "device_self_us": 0.0
+        },
+        {
+          "name": "blt::global_transformer",
+          "calls": 8,
+          "cpu_total_us": 0,
+          "cpu_self_us": 0,
+          "device_total_us": 211771.07700000075,
+          "device_self_us": 211771.07700000075
+        },
+        {
+          "name": "blt::local_decoder",
+          "calls": 8,
+          "cpu_total_us": 133244.70599999826,
+          "cpu_self_us": 41291.27099999727,
+          "device_total_us": 287960.8849999978,
+          "device_self_us": 0.0
+        },
+        {
+          "name": "blt::local_decoder",
+          "calls": 8,
+          "cpu_total_us": 0,
+          "cpu_self_us": 0,
+          "device_total_us": 296574.8439999999,
+          "device_self_us": 296574.8439999999
+        },
+        {
+          "name": "blt::sampling_commit",
+          "calls": 8,
+          "cpu_total_us": 777.3540000002831,
+          "cpu_self_us": 329.6580000021495,
+          "device_total_us": 74.91100000066217,
+          "device_self_us": 0.0
+        },
+        {
+          "name": "blt::sampling_commit",
+          "calls": 8,
+          "cpu_total_us": 0,
+          "cpu_self_us": 0,
+          "device_total_us": 82.36599999992177,
+          "device_self_us": 82.36599999992177
+        },
+        {
+          "name": "blt::output_transfer",
+          "calls": 1,
+          "cpu_total_us": 19533.281999999657,
+          "cpu_self_us": 53.152999999932945,
+          "device_total_us": 1.95200000051409,
+          "device_self_us": 0.0
+        },
+        {
+          "name": "blt::output_transfer",
+          "calls": 1,
+          "cpu_total_us": 0,
+          "cpu_self_us": 0,
+          "device_total_us": 1.95200000051409,
+          "device_self_us": 1.95200000051409
+        }
+      ]
+    },
+    {
+      "requested_context_bytes": 2048,
+      "actual_context_bytes": 2048,
+      "batch_size": 4,
+      "output_steps": 8,
+      "warmup": 2,
+      "samples": [
+        {
+          "elapsed_seconds": 18.585099539719522,
+          "raw_byte_count": 32,
+          "outputs": [
+            {
+              "steps": 8,
+              "raw_byte_count": 8,
+              "special_token_count": 0,
+              "valid_utf8": true,
+              "raw_hex": "2073746f70706564",
+              "display_text": " stopped"
+            },
+            {
+              "steps": 8,
+              "raw_byte_count": 8,
+              "special_token_count": 0,
+              "valid_utf8": true,
+              "raw_hex": "2073746f70706564",
+              "display_text": " stopped"
+            },
+            {
+              "steps": 8,
+              "raw_byte_count": 8,
+              "special_token_count": 0,
+              "valid_utf8": true,
+              "raw_hex": "2073746f70706564",
+              "display_text": " stopped"
+            },
+            {
+              "steps": 8,
+              "raw_byte_count": 8,
+              "special_token_count": 0,
+              "valid_utf8": true,
+              "raw_hex": "2073746f70706564",
+              "display_text": " stopped"
+            }
+          ],
+          "generated_ids": [
+            [
+              36,
+              119,
+              120,
+              115,
+              116,
+              116,
+              105,
+              104
+            ],
+            [
+              36,
+              119,
+              120,
+              115,
+              116,
+              116,
+              105,
+              104
+            ],
+            [
+              36,
+              119,
+              120,
+              115,
+              116,
+              116,
+              105,
+              104
+            ],
+            [
+              36,
+              119,
+              120,
+              115,
+              116,
+              116,
+              105,
+              104
+            ]
+          ]
+        },
+        {
+          "elapsed_seconds": 18.71002435963601,
+          "raw_byte_count": 32,
+          "outputs": [
+            {
+              "steps": 8,
+              "raw_byte_count": 8,
+              "special_token_count": 0,
+              "valid_utf8": true,
+              "raw_hex": "2073746f70706564",
+              "display_text": " stopped"
+            },
+            {
+              "steps": 8,
+              "raw_byte_count": 8,
+              "special_token_count": 0,
+              "valid_utf8": true,
+              "raw_hex": "2073746f70706564",
+              "display_text": " stopped"
+            },
+            {
+              "steps": 8,
+              "raw_byte_count": 8,
+              "special_token_count": 0,
+              "valid_utf8": true,
+              "raw_hex": "2073746f70706564",
+              "display_text": " stopped"
+            },
+            {
+              "steps": 8,
+              "raw_byte_count": 8,
+              "special_token_count": 0,
+              "valid_utf8": true,
+              "raw_hex": "2073746f70706564",
+              "display_text": " stopped"
+            }
+          ],
+          "generated_ids": [
+            [
+              36,
+              119,
+              120,
+              115,
+              116,
+              116,
+              105,
+              104
+            ],
+            [
+              36,
+              119,
+              120,
+              115,
+              116,
+              116,
+              105,
+              104
+            ],
+            [
+              36,
+              119,
+              120,
+              115,
+              116,
+              116,
+              105,
+              104
+            ],
+            [
+              36,
+              119,
+              120,
+              115,
+              116,
+              116,
+              105,
+              104
+            ]
+          ]
+        },
+        {
+          "elapsed_seconds": 18.776956143788993,
+          "raw_byte_count": 32,
+          "outputs": [
+            {
+              "steps": 8,
+              "raw_byte_count": 8,
+              "special_token_count": 0,
+              "valid_utf8": true,
+              "raw_hex": "2073746f70706564",
+              "display_text": " stopped"
+            },
+            {
+              "steps": 8,
+              "raw_byte_count": 8,
+              "special_token_count": 0,
+              "valid_utf8": true,
+              "raw_hex": "2073746f70706564",
+              "display_text": " stopped"
+            },
+            {
+              "steps": 8,
+              "raw_byte_count": 8,
+              "special_token_count": 0,
+              "valid_utf8": true,
+              "raw_hex": "2073746f70706564",
+              "display_text": " stopped"
+            },
+            {
+              "steps": 8,
+              "raw_byte_count": 8,
+              "special_token_count": 0,
+              "valid_utf8": true,
+              "raw_hex": "2073746f70706564",
+              "display_text": " stopped"
+            }
+          ],
+          "generated_ids": [
+            [
+              36,
+              119,
+              120,
+              115,
+              116,
+              116,
+              105,
+              104
+            ],
+            [
+              36,
+              119,
+              120,
+              115,
+              116,
+              116,
+              105,
+              104
+            ],
+            [
+              36,
+              119,
+              120,
+              115,
+              116,
+              116,
+              105,
+              104
+            ],
+            [
+              36,
+              119,
+              120,
+              115,
+              116,
+              116,
+              105,
+              104
+            ]
+          ]
+        },
+        {
+          "elapsed_seconds": 18.777425084263086,
+          "raw_byte_count": 32,
+          "outputs": [
+            {
+              "steps": 8,
+              "raw_byte_count": 8,
+              "special_token_count": 0,
+              "valid_utf8": true,
+              "raw_hex": "2073746f70706564",
+              "display_text": " stopped"
+            },
+            {
+              "steps": 8,
+              "raw_byte_count": 8,
+              "special_token_count": 0,
+              "valid_utf8": true,
+              "raw_hex": "2073746f70706564",
+              "display_text": " stopped"
+            },
+            {
+              "steps": 8,
+              "raw_byte_count": 8,
+              "special_token_count": 0,
+              "valid_utf8": true,
+              "raw_hex": "2073746f70706564",
+              "display_text": " stopped"
+            },
+            {
+              "steps": 8,
+              "raw_byte_count": 8,
+              "special_token_count": 0,
+              "valid_utf8": true,
+              "raw_hex": "2073746f70706564",
+              "display_text": " stopped"
+            }
+          ],
+          "generated_ids": [
+            [
+              36,
+              119,
+              120,
+              115,
+              116,
+              116,
+              105,
+              104
+            ],
+            [
+              36,
+              119,
+              120,
+              115,
+              116,
+              116,
+              105,
+              104
+            ],
+            [
+              36,
+              119,
+              120,
+              115,
+              116,
+              116,
+              105,
+              104
+            ],
+            [
+              36,
+              119,
+              120,
+              115,
+              116,
+              116,
+              105,
+              104
+            ]
+          ]
+        },
+        {
+          "elapsed_seconds": 18.826264881063253,
+          "raw_byte_count": 32,
+          "outputs": [
+            {
+              "steps": 8,
+              "raw_byte_count": 8,
+              "special_token_count": 0,
+              "valid_utf8": true,
+              "raw_hex": "2073746f70706564",
+              "display_text": " stopped"
+            },
+            {
+              "steps": 8,
+              "raw_byte_count": 8,
+              "special_token_count": 0,
+              "valid_utf8": true,
+              "raw_hex": "2073746f70706564",
+              "display_text": " stopped"
+            },
+            {
+              "steps": 8,
+              "raw_byte_count": 8,
+              "special_token_count": 0,
+              "valid_utf8": true,
+              "raw_hex": "2073746f70706564",
+              "display_text": " stopped"
+            },
+            {
+              "steps": 8,
+              "raw_byte_count": 8,
+              "special_token_count": 0,
+              "valid_utf8": true,
+              "raw_hex": "2073746f70706564",
+              "display_text": " stopped"
+            }
+          ],
+          "generated_ids": [
+            [
+              36,
+              119,
+              120,
+              115,
+              116,
+              116,
+              105,
+              104
+            ],
+            [
+              36,
+              119,
+              120,
+              115,
+              116,
+              116,
+              105,
+              104
+            ],
+            [
+              36,
+              119,
+              120,
+              115,
+              116,
+              116,
+              105,
+              104
+            ],
+            [
+              36,
+              119,
+              120,
+              115,
+              116,
+              116,
+              105,
+              104
+            ]
+          ]
+        }
+      ],
+      "summary": {
+        "samples": 5,
+        "raw_bytes_per_second_per_gpu": 1.7080190532250934,
+        "batch_latency_seconds_median": 18.776956143788993,
+        "batch_latency_seconds_p95": 18.81649692170322,
+        "batch_latency_seconds_min": 18.585099539719522,
+        "usd_per_million_raw_bytes": null,
+        "note": "Single-GPU closed-loop equal-length uncached batches; p95 is batch latency, not a serving SLO. Raw bytes may be invalid UTF-8."
+      },
+      "memory": {
+        "resident_allocated_bytes": 9512076288,
+        "peak_allocated_bytes": 9915098624,
+        "peak_reserved_bytes": 10171187200
+      },
+      "diagnostics": {
+        "model_forward_calls": 8,
+        "patcher_calls": 8,
+        "prefix_byte_or_bos_positions_reprocessed": 65680,
+        "patch_positions_including_next_slot": 672,
+        "note": "Uncached work summed across steps; not unique committed patches or per-layer NFEs."
+      },
+      "synchronized_diagnostic": {
+        "first_step_gpu_ready_seconds": 2.3603813890367746,
+        "inter_step_seconds": [
+          2.369543209206313,
+          2.367163931950927,
+          2.355882731731981,
+          2.359094935003668,
+          2.367374538909644,
+          2.3676650780253112,
+          2.367425658274442
+        ],
+        "note": "Separate synchronized pass; observer overhead included. Not network TTFT or production inter-output latency."
+      },
+      "profile_inclusive_ranges": [
+        {
+          "name": "blt::frontend",
+          "calls": 1,
+          "cpu_total_us": 2624.135,
+          "cpu_self_us": 1804.1300000000008,
+          "device_total_us": 19.296000000000276,
+          "device_self_us": 0.0
+        },
+        {
+          "name": "blt::frontend",
+          "calls": 1,
+          "cpu_total_us": 0,
+          "cpu_self_us": 0,
+          "device_total_us": 86.43200000000024,
+          "device_self_us": 86.43200000000024
+        },
+        {
+          "name": "blt::patcher",
+          "calls": 8,
+          "cpu_total_us": 18306117.843999997,
+          "cpu_self_us": 19016.83899999922,
+          "device_total_us": 17110641.16200003,
+          "device_self_us": 0.0
+        },
+        {
+          "name": "blt::patcher",
+          "calls": 8,
+          "cpu_total_us": 0,
+          "cpu_self_us": 0,
+          "device_total_us": 17187177.901,
+          "device_self_us": 17187177.901
+        },
+        {
+          "name": "blt::entropy_model",
+          "calls": 32,
+          "cpu_total_us": 1597064.5210000079,
+          "cpu_self_us": 180218.7280000404,
+          "device_total_us": 17101917.680000044,
+          "device_self_us": 0.0
+        },
+        {
+          "name": "blt::entropy_model",
+          "calls": 32,
+          "cpu_total_us": 0,
+          "cpu_self_us": 0,
+          "device_total_us": 17119519.278,
+          "device_self_us": 17119519.278
+        },
+        {
+          "name": "blt::model",
+          "calls": 8,
+          "cpu_total_us": 629250.7109999983,
+          "cpu_self_us": 37372.41200000001,
+          "device_total_us": 1731742.9170001545,
+          "device_self_us": 0.0
+        },
+        {
+          "name": "blt::model",
+          "calls": 8,
+          "cpu_total_us": 0,
+          "cpu_self_us": 0,
+          "device_total_us": 463659.92400000244,
+          "device_self_us": 463659.92400000244
+        },
+        {
+          "name": "blt::hash_embeddings",
+          "calls": 8,
+          "cpu_total_us": 29447.119000001345,
+          "cpu_self_us": 6559.871999999974,
+          "device_total_us": 13599.024000007194,
+          "device_self_us": 0.0
+        },
+        {
+          "name": "blt::hash_embeddings",
+          "calls": 8,
+          "cpu_total_us": 0,
+          "cpu_self_us": 0,
+          "device_total_us": 30271.671999999322,
+          "device_self_us": 30271.671999999322
+        },
+        {
+          "name": "blt::local_encoder",
+          "calls": 8,
+          "cpu_total_us": 23222.420999998692,
+          "cpu_self_us": 7118.6409999835305,
+          "device_total_us": 158736.24599999748,
+          "device_self_us": 0.0
+        },
+        {
+          "name": "blt::local_encoder",
+          "calls": 8,
+          "cpu_total_us": 0,
+          "cpu_self_us": 0,
+          "device_total_us": 162703.9430000009,
+          "device_self_us": 162703.9430000009
+        },
+        {
+          "name": "blt::global_transformer",
+          "calls": 8,
+          "cpu_total_us": 226589.430999998,
+          "cpu_self_us": 79666.6580000068,
+          "device_total_us": 146701.26100013964,
+          "device_self_us": 0.0
+        },
+        {
+          "name": "blt::global_transformer",
+          "calls": 8,
+          "cpu_total_us": 0,
+          "cpu_self_us": 0,
+          "device_total_us": 227491.16500000097,
+          "device_self_us": 227491.16500000097
+        },
+        {
+          "name": "blt::local_decoder",
+          "calls": 8,
+          "cpu_total_us": 138883.75600000005,
+          "cpu_self_us": 42384.0880000405,
+          "device_total_us": 1409229.2550000167,
+          "device_self_us": 0.0
+        },
+        {
+          "name": "blt::local_decoder",
+          "calls": 8,
+          "cpu_total_us": 0,
+          "cpu_self_us": 0,
+          "device_total_us": 1416964.819000003,
+          "device_self_us": 1416964.819000003
+        },
+        {
+          "name": "blt::sampling_commit",
+          "calls": 8,
+          "cpu_total_us": 789.0270000007004,
+          "cpu_self_us": 355.8440000070259,
+          "device_total_us": 111.68099999940023,
+          "device_self_us": 0.0
+        },
+        {
+          "name": "blt::sampling_commit",
+          "calls": 8,
+          "cpu_total_us": 0,
+          "cpu_self_us": 0,
+          "device_total_us": 121.3120000003837,
+          "device_self_us": 121.3120000003837
+        },
+        {
+          "name": "blt::output_transfer",
+          "calls": 1,
+          "cpu_total_us": 158298.01000000164,
+          "cpu_self_us": 67.74100000411272,
+          "device_total_us": 4.800000000745058,
+          "device_self_us": 0.0
+        },
+        {
+          "name": "blt::output_transfer",
+          "calls": 1,
+          "cpu_total_us": 0,
+          "cpu_self_us": 0,
+          "device_total_us": 12.76799999922514,
+          "device_self_us": 12.76799999922514
+        }
+      ]
+    }
+  ]
+}
